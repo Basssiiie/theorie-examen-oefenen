@@ -1,0 +1,43 @@
+{
+	"env": {
+		"browser": true,
+		"es6": true,
+		"es2017": true,
+		"node": true
+	},
+	"extends": [
+		"eslint:recommended",
+		"plugin:@typescript-eslint/recommended",
+		"prettier"
+	],
+	"globals": {
+		"Atomics": "readonly",
+		"SharedArrayBuffer": "readonly"
+	},
+	"overrides": [{
+		"files": [ "*.svelte" ],
+		"processor": "svelte3/svelte3"
+	}],
+	"parser": "@typescript-eslint/parser",
+	"parserOptions": {
+		"ecmaVersion": 2019,
+		"sourceType": "module"
+	},
+	"plugins": [
+		"svelte3",
+		"@typescript-eslint"
+	],
+	"rules": {
+		"no-unused-vars": "off",
+		"semi": "off",
+		"@typescript-eslint/explicit-function-return-type": ["warn"],
+		"@typescript-eslint/member-delimiter-style": "warn",
+		"@typescript-eslint/no-inferrable-types": "off",
+		"@typescript-eslint/semi": ["warn"]
+	},
+	"settings": {
+		"import/resolver": {
+			"node": { "extensions": [ ".js", ".ts" ] }
+		}
+	}
+}
