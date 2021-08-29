@@ -1,7 +1,8 @@
-import preprocess from 'svelte-preprocess';
-import adapter from '@sveltejs/adapter-static';
+import { resolve } from "path";
+import preprocess from "svelte-preprocess";
+import adapter from "@sveltejs/adapter-static";
 
-/** @type {import('@sveltejs/kit').Config} */
+/** @type {import("@sveltejs/kit").Config} */
 const config = {
 	// Consult https://github.com/sveltejs/svelte-preprocess
 	// for more information about preprocessors
@@ -9,16 +10,24 @@ const config = {
 
 	kit: {
 		adapter: adapter({
-			pages: 'build',
-			assets: 'build',
+			pages: "build",
+			assets: "build",
 			fallback: null
 		}),
 		paths: {
 			// set base url path to repo name for Github Pages
-			//base: '/gratis-theorie-examen'
+			//base: "/gratis-theorie-examen"
 		},
 		// hydrate the <div id="svelte"> element in src/app.html
-		target: '#svelte'
+		target: "#svelte",
+		vite: {
+			resolve: {
+				alias: {
+					"@components": resolve("./src/components"),
+					"@services": resolve("./src/services"),
+				}
+			}
+		}
 	}
 };
 
