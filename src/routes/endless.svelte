@@ -1,6 +1,9 @@
 <script lang="ts">
+	import QuestionLoader from "@components/QuestionLoader.svelte";
 	import Game from "@components/Game.svelte"
 </script>
 
 
-<Game />
+<QuestionLoader>
+	<Game />
+</QuestionLoader>

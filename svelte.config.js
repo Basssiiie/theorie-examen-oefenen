@@ -24,7 +24,9 @@ const config = {
 			resolve: {
 				alias: {
 					"@components": resolve("./src/components"),
+					"@localisation": resolve("./src/localisation"),
 					"@services": resolve("./src/services"),
+					"@utilities": resolve("./src/utilities"),
 				}
 			}
 		}

@@ -23,9 +23,16 @@
 		"allowJs": true,
 		"checkJs": true,
 		"paths": {
-			"@components": ["src/components"],
-			"@services": ["src/services"]
+			"@components/*": ["src/components/*"],
+			"@localisation/*": ["src/localisation/*"],
+			"@services/*": ["src/services/*"],
+			"@utilities/*": ["src/utilities/*"]
 		}
 	},
-	"include": ["src/**/*.d.ts", "src/**/*.js", "src/**/*.ts", "src/**/*.svelte"]
+	"include": [
+		"src/**/*.d.ts",
+		"src/**/*.js",
+		"src/**/*.ts",
+		"src/**/*.svelte"
+	]
 }

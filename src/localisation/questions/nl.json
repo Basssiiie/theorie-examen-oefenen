@@ -1,0 +1,68 @@
+{
+	"generic":
+	{
+		"yes": "Ja",
+		"no": "Nee"
+	},
+	"maxspeed":
+	{
+		"snelweg.5h":
+		{
+			"question": "Wat is de maximum snelheid op de snelweg om 5:00 in de ochtend, tenzij anders aangegeven?",
+			"why": "De standaard maximum snelheid 's nachts op de snelweg is 130 km/u en geldt tot 6:00 's ochtends."
+		},
+		"snelweg.6h":
+		{
+			"question": "Wat is de gebruikelijke maximum snelheid op de snelweg om 7:00 in de ochtend?",
+			"why": "De standaard maximum snelheid overdag op de snelweg is 100 km/u en geldt vanaf 6:00 's ochtends."
+		},
+		"snelweg.18h":
+		{
+			"question": "Wat is de gebruikelijke maximum snelheid op de snelweg om 18:00 in de avond?",
+			"why": "De standaard maximum snelheid overdag op de snelweg is 100 km/u en geldt tot 19:00 's avonds."
+		},
+		"snelweg.19h":
+		{
+			"question": "Wat is de maximum snelheid op de snelweg om 19:00 in de avond, tenzij anders aangegeven?",
+			"why": "De standaard maximum snelheid 's nachts op de snelweg is 130 km/u en geldt vanaf 19:00 's avonds."
+		},
+		"autoweg":
+		{
+			"question": "Wat is de gebruikelijke maximum snelheid op de autoweg?",
+			"why": "De standaard maximum snelheid op de autoweg is 100 km/u."
+		},
+		"buiten":
+		{
+			"question": "Wat is de maximum snelheid buiten de bebouwde kom, tenzij anders aangegeven?",
+			"why": "Als je niet op een snelweg of autoweg zit en er zijn geen andere borden die een snelheid aangeven, dan is de standaard maximum snelheid buiten de bebouwde kom 80 km/u."
+		}
+	},
+	"vehiclespeed":
+	{
+		"aanhangwagen.heavy":
+		{
+			"question": "Wat is de maximumsnelheid op de snelweg voor een auto met een aanhangwagen van meer dan 3500 kg?"
+		},
+		"aanhangwagen.light":
+		{
+			"question": "Wat is de maximumsnelheid op de snelweg voor een auto met een aanhangwagen van minder dan 3500 kg?"
+		},
+		"caravan.heavy":
+		{
+			"question": "Wat is de maximumsnelheid op de snelweg voor een auto met een caravan van meer dan 3500 kg?"
+		},
+		"caravan.light":
+		{
+			"question": "Wat is de maximumsnelheid op de snelweg voor een auto met een caravan van minder dan 3500 kg?"
+		},
+		"fietsendrager":
+		{
+			"question": "Wat is de maximumsnelheid op de autoweg voor een auto met een fietsendrager?",
+			"why": "Een fietsendrager is geen aanhangswagen en er gelden ook geen speciale regels voor. De auto moet dus de reguliere maximumsnelheid van de autoweg volgen: 100 km/u."
+		},
+		"vrachtwagen":
+		{
+			"question": "Wat is de maximumsnelheid op de snelweg voor een vrachtwagen?"
+		}
+	}
+}
