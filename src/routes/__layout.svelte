@@ -17,10 +17,10 @@
 	{
 		await waitLocale();
 		return {};
-	}
+	};
 </script>
 <script lang="ts">
-	import { locale, locales, _ } from "svelte-i18n"
+	import { locale, locales, _ } from "svelte-i18n";
 </script>
 
 

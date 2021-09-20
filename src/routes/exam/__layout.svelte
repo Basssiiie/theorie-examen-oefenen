@@ -10,7 +10,7 @@
 	{
 		await waitLocale();
 		return {};
-	}
+	};
 </script>
 
 <slot/>

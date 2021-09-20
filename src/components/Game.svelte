@@ -2,7 +2,7 @@
 	import * as QuestionService from "@services/questions/QuestionService";
 	import type { LocalisedQuestionText } from "@services/questions/types/LocalisedQuestionText";
 	import type { Question } from "@services/questions/types/Question";
-	import { _, json, locale } from "svelte-i18n"
+	import { _, json, locale } from "svelte-i18n";
 
 	export let numberOfQuestions: number | null = null;
 
@@ -13,7 +13,7 @@
 	let question: Question;
 	let localisation: LocalisedQuestionText;
 
-	function getNext()
+	function getNext(): void
 	{
 		questionCount++;
 		question = QuestionService.nextQuestion();

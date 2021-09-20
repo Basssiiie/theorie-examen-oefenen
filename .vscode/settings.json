@@ -1,6 +1,11 @@
 {
-    "search.exclude": {
-        "**/.svelte-kit": true,
-        "**/build": true,
-    },
+	"eslint.validate": [
+		"javascript",
+		"typescript",
+		"svelte"
+	],
+	"search.exclude": {
+		"**/.svelte-kit": true,
+		"**/build": true,
+	},
 }
