@@ -5,5 +5,5 @@
 
 
 <QuestionLoader>
-	<Game numberOfGames={25} />
+	<Game numberOfQuestions={25} />
 </QuestionLoader>

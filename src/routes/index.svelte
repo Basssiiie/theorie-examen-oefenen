@@ -14,10 +14,10 @@
 
 	<ul>
 		<li>
-			<a href="/exam">CBR Examen (25 vragen)</a>
+			<a href="/exam/cbr">CBR Examen (25 vragen)</a>
 		</li>
 		<li>
-			<a href="/endless">Oneindige modus</a>
+			<a href="/exam/endless">Oneindige modus</a>
 		</li>
 	</ul>
 </section>
