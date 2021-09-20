@@ -1,10 +1,11 @@
 <script lang="ts">
+	import { base } from "$app/paths";
 	import { _ } from "svelte-i18n";
 </script>
 
 
 <svelte:head>
-	<title>Home</title>
+	<title>{$_("intro.title")}</title>
 </svelte:head>
 
 
@@ -15,10 +16,10 @@
 
 	<ul>
 		<li>
-			<a href="/exam/cbr">{$_("exams.cbr")}</a>
+			<a href="{base}/exam/cbr">{$_("exams.cbr")}</a>
 		</li>
 		<li>
-			<a href="/exam/endless">{$_("exams.endless")}</a>
+			<a href="{base}/exam/endless">{$_("exams.endless")}</a>
 		</li>
 	</ul>
 </section>
