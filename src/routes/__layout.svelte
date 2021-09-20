@@ -7,8 +7,21 @@
 		fallbackLocale: "en"
 	});
 </script>
+<script lang="ts">
+	import { locale, locales } from 'svelte-i18n'
+</script>
+
 
 <slot/>
+
+<p>Taal:</p>
+
+<select bind:value={$locale}>
+	{#each $locales as locale}
+		<option value={locale}>{locale}</option>
+	{/each}
+</select>
+
 
 <style>
 	:root

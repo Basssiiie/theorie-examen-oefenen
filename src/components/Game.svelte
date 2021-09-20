@@ -38,9 +38,6 @@
 	</div>
 
 	<button on:click={getNext}>Volgende</button>
-
-	<p>Taal: {$locale}</p>
-
 </section>
 
 
