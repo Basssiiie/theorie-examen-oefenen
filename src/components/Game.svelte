@@ -23,8 +23,9 @@
 	getNext();
 </script>
 
+
 <section>
-	<h1>Vraag {questionCount}{numberOfQuestions ? `/${numberOfQuestions}` : ''}</h1>
+	<h1>{$_("question")} {questionCount}{numberOfQuestions ? ` / ${numberOfQuestions}` : ''}</h1>
 	<div class="picture">
 		Afbeelding
 	</div>
@@ -37,9 +38,8 @@
 		<p>Antwoorden</p>
 	</div>
 
-	<button on:click={getNext}>Volgende</button>
+	<button on:click={getNext}>{$_("next")}</button>
 </section>
-
 
 
 <style>

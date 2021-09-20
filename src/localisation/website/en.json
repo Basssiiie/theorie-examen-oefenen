@@ -1,2 +1,16 @@
 {
+	"language": "Language",
+	"question": "Question",
+	"next": "Next",
+	"yes": "Yes",
+	"no": "No",
+	"exams":
+	{
+		"cbr": "CBR exam (25 questions)",
+		"endless": "Endless mode"
+	},
+	"intro":
+	{
+		"title": "Welcome!"
+	}
 }

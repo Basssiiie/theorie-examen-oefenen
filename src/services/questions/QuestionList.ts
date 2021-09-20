@@ -4,7 +4,7 @@ import type { QuestionGroup } from "./types/QuestionGroup";
 export const Questions: QuestionGroup[] =
 [
 	{
-		id: "maxspeed",
+		id: "roadspeed",
 		questions: [
 			{
 				id: "snelweg.5h",

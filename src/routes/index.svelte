@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { _ } from "svelte-i18n";
 </script>
 
 
@@ -9,15 +10,15 @@
 
 <section>
 	<h1>
-		Welcome
+		{$_("intro.title")}
 	</h1>
 
 	<ul>
 		<li>
-			<a href="/exam/cbr">CBR Examen (25 vragen)</a>
+			<a href="/exam/cbr">{$_("exams.cbr")}</a>
 		</li>
 		<li>
-			<a href="/exam/endless">Oneindige modus</a>
+			<a href="/exam/endless">{$_("exams.endless")}</a>
 		</li>
 	</ul>
 </section>

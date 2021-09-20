@@ -1,10 +1,5 @@
 {
-	"generic":
-	{
-		"yes": "Ja",
-		"no": "Nee"
-	},
-	"maxspeed":
+	"roadspeed":
 	{
 		"snelweg.5h":
 		{

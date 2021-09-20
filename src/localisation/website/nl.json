@@ -1,2 +1,16 @@
 {
+	"language": "Taal",
+	"question": "Vraag",
+	"next": "Volgende",
+	"yes": "Ja",
+	"no": "Nee",
+	"exams":
+	{
+		"cbr": "CBR examen (25 vragen)",
+		"endless": "Oneindige modus"
+	},
+	"intro":
+	{
+		"title": "Welkom!"
+	}
 }
