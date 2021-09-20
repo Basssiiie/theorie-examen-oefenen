@@ -4,17 +4,18 @@
 	import type { Question } from "@services/questions/types/Question";
 	import { _, json, locale } from "svelte-i18n"
 
-	export let numberOfGames: number | null = null;
+	export let numberOfQuestions: number | null = null;
 
 	console.log(`[Game.svelte] Init game in language: ${$locale}`);
 	QuestionService.resetAllProgress();
 
-	let currentGame = 1;
+	let questionCount = 0;
 	let question: Question;
 	let localisation: LocalisedQuestionText;
 
 	function getNext()
 	{
+		questionCount++;
 		question = QuestionService.nextQuestion();
 		localisation = $json(question.id);
 		console.log(`[Game.svelte] Question: ${question.id} -> ${JSON.stringify(localisation)}`);
@@ -23,7 +24,7 @@
 </script>
 
 <section>
-	<h1>Vraag {currentGame}{numberOfGames ? `/${numberOfGames}` : ''}</h1>
+	<h1>Vraag {questionCount}{numberOfQuestions ? `/${numberOfQuestions}` : ''}</h1>
 	<div class="picture">
 		Afbeelding
 	</div>
