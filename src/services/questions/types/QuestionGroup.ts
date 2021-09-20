@@ -7,8 +7,12 @@ import type { Question } from "./Question";
 export interface QuestionGroup
 {
 	/**
-	 * Id of this set of questions.
+	 * Id of this set of questions, used for localisation.
 	 */
 	id: string;
+
+	/**
+	 * The available questions within this group.
+	 */
 	questions: Question[];
 }

@@ -1,4 +1,4 @@
-import { QuestionType } from "./types/QuestionBase";
+import { QuestionType } from "./types/QuestionType";
 import type { QuestionGroup } from "./types/QuestionGroup";
 
 export const Questions: QuestionGroup[] =

@@ -1,4 +1,5 @@
-import type { QuestionBase, QuestionType } from "./QuestionBase";
+import type { QuestionBase } from "./QuestionBase";
+import type { QuestionType } from "./QuestionType";
 
 
 /**

@@ -1,10 +1,12 @@
+import type { QuestionType } from "./QuestionType";
+
 /**
  * Base information for a question.
  */
 export interface QuestionBase
 {
 	/**
-	 * The id of the question.
+	 * The id of the question, used for localisation.
 	 */
 	id: string;
 
@@ -12,16 +14,4 @@ export interface QuestionBase
 	 * The type of question.
 	 */
 	type: QuestionType;
-}
-
-
-/**
- * Enumeration of possible question types.
- */
-export const enum QuestionType
-{
-	MultipleChoice = 1,
-	MultipleImages = 2,
-	YesNo = 3,
-	NumberEntry = 4,
 }
