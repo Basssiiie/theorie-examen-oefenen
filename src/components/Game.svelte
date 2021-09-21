@@ -2,6 +2,7 @@
 	import * as QuestionService from "@services/questions/QuestionService";
 	import type { LocalisedQuestionText } from "@services/questions/types/LocalisedQuestionText";
 	import type { Question } from "@services/questions/types/Question";
+	import { QuestionType } from "@services/questions/types/QuestionType";
 	import { _, json, locale } from "svelte-i18n";
 
 	export let numberOfQuestions: number | null = null;
@@ -9,36 +10,79 @@
 	console.log(`[Game.svelte] Init game in language: ${$locale}`);
 	QuestionService.resetAllProgress();
 
-	let questionCount = 0;
-	let question: Question;
-	let localisation: LocalisedQuestionText;
-
-	function getNext(): void
+	interface ActiveQuestion
 	{
-		questionCount++;
-		question = QuestionService.nextQuestion();
-		localisation = $json(question.id);
-		console.log(`[Game.svelte] Question: ${question.id} -> ${JSON.stringify(localisation)}`);
+		question: Question;
+		localisation: LocalisedQuestionText;
+		answer: number | null;
 	}
-	getNext();
+
+	const questions: ActiveQuestion[] = [];
+	let questionIndex = 0;
+	let current: ActiveQuestion;
+	let form: HTMLFormElement;
+
+	function update(): void
+	{
+		if (questionIndex < questions.length)
+		{
+			current = questions[questionIndex];
+		}
+		else
+		{
+			const question = QuestionService.nextQuestion();
+			current = {
+				question: question,
+				localisation: $json(question.id),
+				answer: null
+			};
+			questions.push(current);
+		}
+	}
+	function goNext(): void
+	{
+		if (form.checkValidity())
+		{
+			questionIndex++;
+			update();
+		}
+	}
+	function goPrevious(): void
+	{
+		if (questionIndex > 0)
+		{
+			questionIndex--;
+			update();
+		}
+	}
+	update();
 </script>
 
 
 <section>
-	<h1>{$_("question")} {questionCount}{numberOfQuestions ? ` / ${numberOfQuestions}` : ''}</h1>
-	<div class="picture">
-		Afbeelding
-	</div>
+	<h1>{$_("question")} {questionIndex + 1}{numberOfQuestions ? ` / ${numberOfQuestions}` : ''}</h1>
 
-	<div class="question">
-		<p>{localisation?.question}</p>
-	</div>
+	<form bind:this={form} on:submit|preventDefault={goNext} autocomplete="off">
+		<div class="picture">
+			Afbeelding
+		</div>
 
-	<div class="choices">
-		<p>Antwoorden</p>
-	</div>
+		<div class="question">
+			<label for="answer">{current.localisation.question}</label>
+		</div>
 
-	<button on:click={getNext}>{$_("next")}</button>
+		<div class="choices">
+			{#if current.question.type == QuestionType.NumberEntry}
+				<input bind:value={current.answer} id="answer" type="number" min="0" placeholder={$_("game.numberentry.placeholder")} inputmode="numeric" autocomplete="off" required>
+			{:else}.
+				<p>Error: unknown entry type.</p>
+			{/if}
+		</div>
+
+		<button on:click={goPrevious} disabled={questionIndex <= 0} type="button">{$_("previous")}</button>
+		<button type="submit">{$_("next")}</button>
+	</form>
+
 </section>
 
 

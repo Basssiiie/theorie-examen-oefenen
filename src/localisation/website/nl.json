@@ -2,6 +2,7 @@
 	"language": "Taal",
 	"question": "Vraag",
 	"next": "Volgende",
+	"previous": "Vorige",
 	"yes": "Ja",
 	"no": "Nee",
 	"exams":
@@ -12,5 +13,9 @@
 	"intro":
 	{
 		"title": "Welkom!"
+	},
+	"game":
+	{
+		"numberentry.placeholder": "Vul hier het antwoord in."
 	}
 }

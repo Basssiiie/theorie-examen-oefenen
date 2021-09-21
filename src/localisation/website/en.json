@@ -2,6 +2,7 @@
 	"language": "Language",
 	"question": "Question",
 	"next": "Next",
+	"previous": "Previous",
 	"yes": "Yes",
 	"no": "No",
 	"exams":
@@ -12,5 +13,9 @@
 	"intro":
 	{
 		"title": "Welcome!"
+	},
+	"game":
+	{
+		"numberentry.placeholder": "Enter your answer here."
 	}
 }
