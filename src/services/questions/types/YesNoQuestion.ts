@@ -20,8 +20,9 @@ export interface YesNoQuestion extends QuestionBase
 /**
  * Whether the user answer yes or no.
  */
-export const enum YesNoAnswer
+export const YesNoAnswer =
 {
-	Yes = 1,
-	No = 2,
-}
+	Yes: 1,
+	No: 2,
+};
+export type YesNoAnswer = number;
