@@ -31,6 +31,8 @@
 		else
 		{
 			const question = QuestionService.nextQuestion();
+			console.log(`New question: ${question.id}`);
+
 			current = {
 				question: question,
 				localisation: $json(question.id),
@@ -74,7 +76,7 @@
 		<div class="choices">
 			{#if current.question.type == QuestionType.NumberEntry}
 				<input bind:value={current.answer} id="answer" type="number" min="0" placeholder={$_("game.numberentry.placeholder")} inputmode="numeric" autocomplete="off" required>
-			{:else}.
+			{:else}
 				<p>Error: unknown entry type.</p>
 			{/if}
 		</div>
