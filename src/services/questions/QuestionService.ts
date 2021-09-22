@@ -2,7 +2,6 @@ import * as i18n from "svelte-i18n";
 import * as Random from "@utilities/Random";
 import { Questions } from "./QuestionList";
 import type { Question } from "./types/Question";
-import type { QuestionGroup } from "./types/QuestionGroup";
 
 
 i18n.register("en", () => import("@localisation/questions/en.json"));
@@ -41,27 +40,35 @@ export function resetAllProgress(): void
 }
 
 
-// Key: group id, value: set of question id's that have been used.
+/** All available question categories. */
+const questionCategories = Object.keys(Questions);
+
+/** Key: group id, value: set of question id's that have been used. */
 const questionsAllTime = new Map<string, Set<string>>();
 
-// Key: group id, value: used question id.
+/** Key: group id, value: used question id. */
 const questionsThisRound = new Map<string, string>();
 
 
 function getRandomQuestion(): [string, Question]
 {
-	const availableCategories = Questions.filter(g => isQuestionGroupAvailable(g));
+	const availableCategories = questionCategories.filter(key => isQuestionGroupAvailable(key, Questions[key].length));
 	if (availableCategories.length == 0)
 		throw Error("Out of question categories!");
 
-	const nextCategory = Random.take(availableCategories);
+	const nextCategoryId = Random.take(availableCategories);
+	const previouslyUsedQuestions = questionsAllTime.get(nextCategoryId);
 
-	const groupId = nextCategory.id;
-	const availableQuestions = nextCategory.questions.filter(q => isQuestionAvailable(groupId, q));
+	let availableQuestions = Questions[nextCategoryId];
+	if (previouslyUsedQuestions && previouslyUsedQuestions.size > 0)
+	{
+		availableQuestions = availableQuestions.filter(q => !previouslyUsedQuestions.has(q.id));
+	}
 
 	const question = Random.take(availableQuestions);
-	markQuestionAsUsed(groupId, question);
-	return [groupId, question];
+	markQuestionAsUsed(nextCategoryId, question);
+
+	return [nextCategoryId, question];
 }
 
 
@@ -81,19 +88,12 @@ function markQuestionAsUsed(groupId: string, question: Question): void
 }
 
 
-function isQuestionGroupAvailable(group: QuestionGroup): boolean
+function isQuestionGroupAvailable(groupId: string, questionCount: number): boolean
 {
-	if (!questionsThisRound.has(group.id))
+	if (!questionsThisRound.has(groupId))
 	{
-		const previouslyUsedQuestions = questionsAllTime.get(group.id);
-		return (!previouslyUsedQuestions || previouslyUsedQuestions.size < group.questions.length);
+		const previouslyUsedQuestions = questionsAllTime.get(groupId);
+		return (!previouslyUsedQuestions || previouslyUsedQuestions.size < questionCount);
 	}
 	return false;
-}
-
-
-function isQuestionAvailable(groupId: string, question: Question): boolean
-{
-	const previouslyUsedQuestions = questionsAllTime.get(groupId);
-	return (!previouslyUsedQuestions || !previouslyUsedQuestions.has(question.id));
 }

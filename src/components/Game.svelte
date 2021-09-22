@@ -91,8 +91,7 @@
 <style>
 	.picture, .question, .choices
 	{
-		border: 2px solid blue;
+		outline: blue solid 1px;
 		padding: 10px;
-
 	}
 </style>
