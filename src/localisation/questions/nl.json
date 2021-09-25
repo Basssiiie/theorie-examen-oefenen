@@ -127,7 +127,7 @@
 			},
 			"geleider.hond":
 			{
-				"question": "Valt iemand die met zijn hond de straat oversteekt onder het begrip 'bestuurder'?",
+				"question": "Valt iemand die met zijn of haar hond de straat oversteekt onder het begrip 'bestuurder'?",
 				"why": "Mensen die vee of een rij- of trekdier begeleiden zijn bestuurders. Dit zijn meestal dieren met hoeven, zoals paarden, koeien, varkens en geiten. Geleiders van honden of katten zijn geen bestuurders."
 			},
 			"instructeur":
@@ -136,6 +136,130 @@
 				"choices": [ "Leerling", "Rij-instructeur", "Rijschool" ],
 				"why": "Bij een auto met dubbele bediening zit er pedalen aan zowel de bestuurderskant als de passagierskant. De rij-instructeur in de passagiersstoel heeft dan de juridische verantwoordelijkheid over de leerling. Verder is de rijschool geen bestuurder."
 			}
+		},
+		"motorrijtuig":
+		{
+			"ebike":
+			{
+				"question": "Is een e-bike (electrische fiets) een motorrijtuig?",
+				"why": "Een e-bike is geen motorrijtuig en volgt dezelfde regels als normale fietsen."
+			},
+			"tram":
+			{
+				"question": "Is een tram een motorrijtuig?",
+				"why": "Een tram is geen motorrijtuig omdat deze zich voortbeweegd via rails. Alle gemotoriseerde voertuigen die zich niet met rails voortbewegen zijn motorrijtuigen."
+			},
+			"handicap.rijtuig":
+			{
+				"question": "Is een gehandicaptenvoertuig een motorrijtuig?",
+				"why": "Een gehandicaptenvoertuig is een motorrijtuig. Alle gemotoriseerde voertuigen die zich niet met rails voortbewegen zijn motorrijtuigen."
+			},
+			"handicap.voertuig":
+			{
+				"question": "Is een gehandicaptenvoertuig een motorvoertuig?",
+				"why": "Een gehandicaptenvoertuig is geen motorvoertuig. Een motorvoertuig zijn alle motorrijtuigen, behalve de bromfiets, gehandicaptenvoertuig en e-bike."
+			},
+			"bromfiets":
+			{
+				"question": "Welk van de volgende antwoorden is juist?",
+				"choices": [ "Een bromfiets is een motorrijtuig.", "Een bromfiets is een motorvoertuig.", "Een bromfiets is een motorvoertuig en motorrijtuig." ],
+				"why": "Alle gemotoriseerde voertuigen die zich niet met rails voortbewegen zijn motorrijtuigen. Een motorvoertuig zijn alle motorrijtuigen, behalve de bromfiets, gehandicaptenvoertuig en e-bike. Er is een verschil omdat er soms verschillende regels zijn voor de twee groepen."
+			}
+		},
+		"wegen":
+		{
+			"doorgaanderijbaan":
+			{
+				"question": "Is een vluchtstrook onderdeel van de doorgaande rijbaan op de snelweg?",
+				"why": "De doorgaande rijbaan omvat alleen de reguliere rijstroken. Invoegstroken, uitrijstroken, vluchtstroken en vluchthavens zijn geen onderdeel van de doorgaande rijbaan."
+			},
+			"weefstrook":
+			{
+				"question": "Wat is een weefstrook?",
+				"choices": [ "Een strook waarin de invoegstrook en uitrijstrook gecombineerd worden.", "Een strook waarmee je van de ene rijbaan naar de andere rijbaan kunt.", "Een strook die twee rijstroken opsplitst, waar je niet overheen mag rijden."],
+				"why": "Een weefstrook is een strook op de snelweg waarin de invoegstrook en uitrijstrook gecombineerd worden. Een strook die twee rijstroken opsplitst heet een puntstuk en een speciale strook waarmee je van de ene rijbaan naar de andere rijbaan kunt bestaat niet."
+			},
+			"tankstation":
+			{
+				"question": "Is een tankstation onderdeel van de snelweg?",
+				"why": "Tankstations, parkeerplaatsen en bushalteplaatsen die naast een snelweg liggen maken geen onderdeel uit van de snelweg."
+			},
+			"stoep":
+			{
+				"question": "Is de stoep onderdeel van 'de weg'?",
+				"why": "Al het ondergrond en de uitrusting van de openbare weg valt onder het begrip 'de weg', inclusief bermen, stoepen, bruggen, vangrail en alle rijbanen."
+			},
+			"berm":
+			{
+				"question": "Is de berm onderdeel van 'de weg'?",
+				"why": "Al het ondergrond en de uitrusting van de openbare weg valt onder het begrip 'de weg', inclusief bermen, stoepen, bruggen, vangrail en alle rijbanen."
+			}
+		},
+		"tijd":
+		{
+			"schemering":
+			{
+				"question": "Welk antwoord is correct?",
+				"choices": [ "Voor schemering gelden dezelfde regels als overdag.", "Voor schemering gelden dezelfde regels als 's nachts.", "Voor schemering gelden andere regels dan overdag of 's nachts."],
+				"why": "Voor schemering gelden dezelfde regels als overdag. Er zijn geen speciale regels voor schemering en de regels voor 's nachts gaan pas in na zonsondergang."
+			},
+			"nacht":
+			{
+				"question": "Wanneer gelden de regels die alleen 's nacht gelden?",
+				"choices": [ "Na zonsondergang.", "Zodra het begint te schemeren.", "Zodra de straatverlichting aan gaat."],
+				"why": "De regels voor overdag gelden van zonsopgang tot zonsondergane n de regels voor 's nachts gelden van zonsondergang tot zonsopgang."
+			}
+		},
+		"parkeren":
+		{
+			"instappen":
+			{
+				"question": "Je wil iemand snel laten instappen langs de weg. Valt dit onder het begrip parkeren?",
+				"why": "Iemand snel laten in- of uitstappen valt niet onder parkeren."
+			},
+			"ladenlossen":
+			{
+				"question": "Je stopt langs de weg om wat spullen in te laden. Valt dit onder het begrip parkeren?",
+				"why": "Als je niet langer stilstaan dan nodig is voor het laden of lossen van spullen, dan dit valt niet onder parkeren."
+			},
+			"winkelen":
+			{
+				"question": "Je stopt voor de winkel om snel wat spullen te kopen. Valt dit onder het begrip parkeren?",
+				"why": "Als je langer stilstaat dan strict noodzakelijk is voor het laden of lossen van spullen, dan valt dit onder parkeren. Als je de winkel binnen wilt gaan om wat te kopen, dan valt dit onder parkeren."
+			}
+		}
+	},
+	"militair":
+	{
+		"vlag.voorkant":
+		{
+			"question": "Welke kleur heeft de vlag op het voorste voertuig in een militaire colonne?",
+			"choices": [ "Groen", "Blauw", "Geel" ],
+			"why": "Het eerste voertuig in een militaire colonne is altijd voorzien van twee blauwe vlaggen linksvoor en rechtsvoor."
+		},
+		"vlag.midden":
+		{
+			"question": "Welke kleur hebben de vlaggen op de voertuigen in een militaire colonne die niet voorraan of achteraan rijden?",
+			"choices": [ "Groen", "Blauw", "De voertuigen in het midden hebben geen vlaggen." ],
+			"why": "De voertuigen die in het midden van een militaire colonne rijden hebben altijd één blauwe vlag aan de rechtervoorzijde."
+		},
+		"vlag.achterkant":
+		{
+			"question": "Welke kleur heeft de vlag op het achterste voertuig in een militaire colonne?",
+			"choices": [ "Groen", "Blauw", "Geel" ],
+			"why": "Het laatste voertuig in een militaire colonne is altijd voorzien van één groene vlag aan de rechtervoorzijde."
+		},
+		"lamp.voorkant":
+		{
+			"question": "Welke lichten zijn blauw op het voorste voertuig in een militaire colonne?",
+			"choices": [ "De linker koplamp", "De rechter koplamp", "Beide koplampen" ],
+			"why": "Alle voertuigen in een militaire colonne, behalve het laatste voertuig, moeten altijd een blauwe koplamp aan de rechterkant dragen."
+		},
+		"lamp.achterkant":
+		{
+			"question": "Welke kleur heeft de rechter koplamp op het achterste voertuig in een militaire colonne?",
+			"choices": [ "Blauw", "Wit", "Groen" ],
+			"why": "Het laatste voertuig in een militaire colonne hebben altijd een groene koplamp rechtsvoor en een normale koplamp linksvoor. Alle andere voertuigen in de colonne dragen een blauwe koplamp rechtsvoor en een normale koplamp linksvoor."
 		}
 	}
 }

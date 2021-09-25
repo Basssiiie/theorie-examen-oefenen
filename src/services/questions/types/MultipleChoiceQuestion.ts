@@ -1,5 +1,5 @@
-import type { QuestionOptions } from "../QuestionOptions";
 import type { QuestionBase } from "./QuestionBase";
+import type { QuestionOptions } from "./QuestionOptions";
 import type { QuestionType } from "./QuestionType";
 
 
