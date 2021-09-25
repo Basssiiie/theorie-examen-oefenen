@@ -34,10 +34,14 @@
 		{
 			const question = QuestionService.nextQuestion();
 			console.log(`New question: ${question.id}`);
+			const localisation: LocalisedQuestionText = $json(question.id);
+
+			if (!localisation)
+				throw Error(`Missing localisation for '${question.id}'`);
 
 			current = {
 				question: question,
-				localisation: $json(question.id),
+				localisation: localisation,
 				answer: null
 			};
 			questions.push(current);
