@@ -1,3 +1,4 @@
+import type { QuestionOptions } from "../QuestionOptions";
 import type { QuestionBase } from "./QuestionBase";
 import type { QuestionType } from "./QuestionType";
 
@@ -16,7 +17,7 @@ export interface MultipleChoiceQuestion extends QuestionBase
 	correct: number;
 
 	/**
-	 * List of all possible answer choices.
+	 * Specific options that can be set for this question.
 	 */
-	choices: string[];
+	flags?: QuestionOptions;
 }

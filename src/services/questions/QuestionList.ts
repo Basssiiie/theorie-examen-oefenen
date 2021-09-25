@@ -130,5 +130,10 @@ export const Questions: Record<string, Question[]> =
 			type: QuestionType.YesNo,
 			correct: YesNoAnswer.No
 		},
+		{
+			id: "instructeur",
+			type: QuestionType.MultipleChoice,
+			correct: 1
+		},
 	]
 };

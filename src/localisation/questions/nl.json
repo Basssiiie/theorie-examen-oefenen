@@ -129,6 +129,12 @@
 			{
 				"question": "Valt iemand die met zijn hond de straat oversteekt onder het begrip 'bestuurder'?",
 				"why": "Mensen die vee of een rij- of trekdier begeleiden zijn bestuurders. Dit zijn meestal dieren met hoeven, zoals paarden, koeien, varkens en geiten. Geleiders van honden of katten zijn geen bestuurders."
+			},
+			"instructeur":
+			{
+				"question": "Wie is de (juridische) bestuurder in een auto met dubbele bediening?",
+				"choices": [ "Leerling", "Rij-instructeur", "Rijschool" ],
+				"why": "Bij een auto met dubbele bediening zit er pedalen aan zowel de bestuurderskant als de passagierskant. De rij-instructeur in de passagiersstoel heeft dan de juridische verantwoordelijkheid over de leerling. Verder is de rijschool geen bestuurder."
 			}
 		}
 	}

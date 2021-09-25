@@ -3,8 +3,9 @@
 	import type { LocalisedQuestionText } from "@services/questions/types/LocalisedQuestionText";
 	import type { Question } from "@services/questions/types/Question";
 	import { QuestionType } from "@services/questions/types/QuestionType";
-import { YesNoAnswer } from "@services/questions/types/YesNoQuestion";
 	import { _, json, locale } from "svelte-i18n";
+	import MultipleChoice from "./answers/MultipleChoice.svelte";
+	import NumberEntry from "./answers/NumberEntry.svelte";
 
 	export let numberOfQuestions: number | null = null;
 
@@ -75,14 +76,10 @@ import { YesNoAnswer } from "@services/questions/types/YesNoQuestion";
 		</div>
 
 		<div class="choices box">
-			{#if current.question.type === QuestionType.NumberEntry}
-				<input bind:value={current.answer} id="answer" type="number" min="0" placeholder={$_("game.numberentry.placeholder")} inputmode="numeric" autocomplete="off" required>
-			{:else if current.question.type === QuestionType.YesNo}
-				<input bind:group={current.answer} value={YesNoAnswer.Yes} id="answer1" type="radio" name="answer" required>
-				<label for="answer1">{$_("yes")}</label>
-
-				<input bind:group={current.answer} value={YesNoAnswer.No} id="answer2" type="radio" name="answer" required>
-				<label for="answer2">{$_("no")}</label>
+			{#if current.question.type === QuestionType.MultipleChoice || current.question.type === QuestionType.YesNo}
+				<MultipleChoice question={current} />
+			{:else if current.question.type === QuestionType.NumberEntry}
+				<NumberEntry question={current} />
 			{:else}
 				<p>Error: unknown entry type.</p>
 			{/if}
