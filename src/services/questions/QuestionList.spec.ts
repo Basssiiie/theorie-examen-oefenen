@@ -1,4 +1,24 @@
-import { Questions} from "./QuestionList";
+import nl from "@localisation/nl/questions.json";
+import { addMessages, init, json } from "svelte-i18n";
+import { get } from 'svelte/store';
+import { Questions } from "./QuestionList";
+import type { LocalisedQuestionText } from "./types/LocalisedQuestionText";
+
+
+/**
+ * Performs a callback for all questions in the question list.
+ */
+function forAllKeys(callback: (key: string) => void): void
+{
+	for (const categoryId in Questions)
+	{
+		const questionsIds = Questions[categoryId].map(q => q.id);
+		for (const id of questionsIds)
+		{
+			callback(`${categoryId}.${id}`);
+		}
+	}
+}
 
 
 describe("Question list", () =>
@@ -8,21 +28,36 @@ describe("Question list", () =>
 		const map = new Map<string, number>();
 		const duplicates: string[] = [];
 
-		for (const categoryId in Questions)
+		forAllKeys(key =>
 		{
-			const questionsIds = Questions[categoryId].map(q => q.id);
-			for (const id in questionsIds)
-			{
-				const key = `${categoryId}.${id}`;
-				const count = (map.get(key) || 0);
+			const count = (map.get(key) || 0);
+			map.set(key, count + 1);
 
-				map.set(key, count + 1);
+			if (count >= 1 && !duplicates.includes(key))
+				duplicates.push(key);
+		});
 
-				if (count > 1 && !duplicates.includes(key))
-					duplicates.push(key);
-			}
-		}
-
+		expect(map.has("begrip.verkeer.geleider.paard")).toBe(true);
+		expect(map.size).toBeGreaterThan(10);
 		expect(duplicates).toEqual([]);
+	});
+
+
+	test("All keys have Dutch localisation", () =>
+	{
+		addMessages("nl", nl);
+		init({ initialLocale: "nl", fallbackLocale: "nl" });
+
+		const missing: unknown[] = [];
+
+		forAllKeys(key =>
+		{
+			const locals: LocalisedQuestionText | undefined = get(json)(key);
+
+			if (!locals || !locals.question)
+				missing.push(key);
+		});
+
+		expect(missing).toEqual([]);
 	});
 });

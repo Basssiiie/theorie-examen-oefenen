@@ -238,7 +238,7 @@ export const Questions: Record<string, Question[]> =
 			flags: QuestionOptions.CanRandomSort
 		},
 		{
-			id: "vlag.voorkant",
+			id: "vlag.midden",
 			type: QuestionType.MultipleChoice,
 			correct: 1,
 			flags: QuestionOptions.CanReverse

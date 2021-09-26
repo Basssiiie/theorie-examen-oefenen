@@ -41,8 +41,5 @@
 		"src/**/*.js",
 		"src/**/*.ts",
 		"src/**/*.svelte"
-	],
-	"exclude": [
-		"src/**/*.spec.ts"
 	]
 }

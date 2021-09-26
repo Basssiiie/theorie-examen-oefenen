@@ -13,7 +13,11 @@
 		"^\\$app(.*)$": [
 			"<rootDir>/.svelte-kit/dev/runtime/app$1",
 			"<rootDir>/.svelte-kit/build/runtime/app$1"
-		]
+		],
+		"^@components/(.*)$": "<rootDir>/src/components/$1",
+		"^@localisation/(.*)$": "<rootDir>/src/localisation/$1",
+		"^@services/(.*)$": "<rootDir>/src/services/$1",
+		"^@utilities/(.*)$": "<rootDir>/src/utilities/$1"
 	},
 	"extensionsToTreatAsEsm": [
 		".svelte",
@@ -26,7 +30,7 @@
 	],
 	"globals": {
 		"ts-jest": {
-			"tsconfig": "tsconfig.spec.json",
+			"tsconfig": "tsconfig.json",
 			"useESM": true
 		}
 	}
