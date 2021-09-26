@@ -4,8 +4,8 @@
 
 	// Init standard localisation
 	console.log(`[__layout.svelte] Init locale`);
-	register("nl", () => import("@localisation/website/nl.json"));
-	register("en", () => import("@localisation/website/en.json"));
+	register("nl", () => import("@localisation/nl/website.json"));
+	register("en", () => import("@localisation/en/website.json"));
 
 	init({
 		initialLocale: "nl",

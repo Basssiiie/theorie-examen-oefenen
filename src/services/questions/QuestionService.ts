@@ -1,11 +1,6 @@
-import * as i18n from "svelte-i18n";
 import * as Random from "@utilities/Random";
 import { Questions } from "./QuestionList";
 import type { Question } from "./types/Question";
-
-
-i18n.register("en", () => import("@localisation/questions/en.json"));
-i18n.register("nl", () => import("@localisation/questions/nl.json"));
 
 
 /**
