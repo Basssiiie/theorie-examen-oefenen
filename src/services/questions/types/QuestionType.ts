@@ -1,10 +1,4 @@
 /**
- * Enumeration of possible question types.
+ * Union of possible question types.
  */
-export const enum QuestionType
-{
-	MultipleChoice = 1,
-	MultipleImages = 2,
-	YesNo = 3,
-	NumberEntry = 4
-}
+export type QuestionType = "choices" | "images" | "yesno" | "number";

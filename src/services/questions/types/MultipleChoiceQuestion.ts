@@ -1,6 +1,5 @@
 import type { QuestionBase } from "./QuestionBase";
 import type { QuestionOptions } from "./QuestionOptions";
-import type { QuestionType } from "./QuestionType";
 
 
 /**
@@ -9,7 +8,7 @@ import type { QuestionType } from "./QuestionType";
 export interface MultipleChoiceQuestion extends QuestionBase
 {
 	/** @inheritdoc */
-	type: QuestionType.MultipleChoice;
+	type: "choices";
 
 	/**
 	 * Index into the choices array to specify which one is the correct answer.

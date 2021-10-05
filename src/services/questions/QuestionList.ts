@@ -1,7 +1,15 @@
 import { QuestionOptions } from "./types/QuestionOptions";
 import type { Question } from "./types/Question";
-import { QuestionType } from "./types/QuestionType";
-import { YesNoAnswer } from "./types/YesNoQuestion";
+import type { QuestionType } from "./types/QuestionType";
+import type { YesNoAnswer } from "./types/YesNoQuestion";
+
+const choices: QuestionType = "choices";
+//const images: QuestionType = "images";
+const yesno: QuestionType = "yesno";
+const number: QuestionType = "number";
+
+const yes: YesNoAnswer = "yes";
+const no: YesNoAnswer = "no";
 
 export const Questions: Record<string, Question[]> =
 {
@@ -9,27 +17,27 @@ export const Questions: Record<string, Question[]> =
 	[
 		{
 			id: "snelweg.5h",
-			type: QuestionType.NumberEntry,
+			type: number,
 			correct: 130
 		},
 		{
 			id: "snelweg.6h",
-			type: QuestionType.NumberEntry,
+			type: number,
 			correct: 100
 		},
 		{
 			id: "snelweg.18h",
-			type: QuestionType.NumberEntry,
+			type: number,
 			correct: 100
 		},
 		{
 			id: "snelweg.19h",
-			type: QuestionType.NumberEntry,
+			type: number,
 			correct: 130
 		},
 		{
 			id: "autoweg",
-			type: QuestionType.NumberEntry,
+			type: number,
 			correct: 100
 		}
 	],
@@ -37,32 +45,32 @@ export const Questions: Record<string, Question[]> =
 	[
 		{
 			id: "aanhangwagen.zwaar",
-			type: QuestionType.NumberEntry,
+			type: number,
 			correct: 80
 		},
 		{
 			id: "aanhangwagen.licht",
-			type: QuestionType.NumberEntry,
+			type: number,
 			correct: 90
 		},
 		{
 			id: "caravan.zwaar",
-			type: QuestionType.NumberEntry,
+			type: number,
 			correct: 80
 		},
 		{
 			id: "caravan.licht",
-			type: QuestionType.NumberEntry,
+			type: number,
 			correct: 90
 		},
 		{
 			id: "fietsendrager",
-			type: QuestionType.NumberEntry,
+			type: number,
 			correct: 100
 		},
 		{
 			id: "vrachtwagen",
-			type: QuestionType.NumberEntry,
+			type: number,
 			correct: 80
 		}
 	],
@@ -70,70 +78,70 @@ export const Questions: Record<string, Question[]> =
 	[
 		{
 			id: "voetganger",
-			type: QuestionType.YesNo,
-			correct: YesNoAnswer.Yes
+			type: yesno,
+			correct: yes
 		},
 		{
 			id: "geleider.paard",
-			type: QuestionType.YesNo,
-			correct: YesNoAnswer.Yes
+			type: yesno,
+			correct: yes
 		},
 		{
 			id: "geleider.schaap",
-			type: QuestionType.YesNo,
-			correct: YesNoAnswer.Yes
+			type: yesno,
+			correct: yes
 		},
 		{
 			id: "skateboard",
-			type: QuestionType.YesNo,
-			correct: YesNoAnswer.Yes
+			type: yesno,
+			correct: yes
 		},
 		{
 			id: "weggebruiker",
-			type: QuestionType.YesNo,
-			correct: YesNoAnswer.Yes
+			type: yesno,
+			correct: yes
 		},
 		{
 			id: "weggebruiker.voetganger",
-			type: QuestionType.YesNo,
-			correct: YesNoAnswer.Yes
+			type: yesno,
+			correct: yes
 		},
 		{
 			id: "weggebruiker.geleider.paard",
-			type: QuestionType.YesNo,
-			correct: YesNoAnswer.Yes
+			type: yesno,
+			correct: yes
 		},
 		{
 			id: "weggebruiker.geleider.koe",
-			type: QuestionType.YesNo,
-			correct: YesNoAnswer.Yes
+			type: yesno,
+			correct: yes
 		},
 	],
 	"begrip.bestuurder":
 	[
 		{
 			id: "voetganger",
-			type: QuestionType.YesNo,
-			correct: YesNoAnswer.No
+			type: yesno,
+			correct: no
 		},
 		{
 			id: "skateboard",
-			type: QuestionType.YesNo,
-			correct: YesNoAnswer.No
+			type: yesno,
+			correct: no
 		},
 		{
 			id: "geleider.geit",
-			type: QuestionType.YesNo,
-			correct: YesNoAnswer.Yes
+			type: yesno,
+			correct: yes
 		},
 		{
 			id: "geleider.hond",
-			type: QuestionType.YesNo,
-			correct: YesNoAnswer.No
+			type: yesno,
+			correct: no
 		},
 		{
 			id: "instructeur",
-			type: QuestionType.MultipleChoice,
+			type: choices,
 			correct: 1,
 			flags: QuestionOptions.CanReverse
 		},
@@ -142,27 +150,27 @@ export const Questions: Record<string, Question[]> =
 	[
 		{
 			id: "ebike",
-			type: QuestionType.YesNo,
-			correct: YesNoAnswer.No
+			type: yesno,
+			correct: no
 		},
 		{
 			id: "tram",
-			type: QuestionType.YesNo,
-			correct: YesNoAnswer.No
+			type: yesno,
+			correct: no
 		},
 		{
 			id: "handicap.rijtuig",
-			type: QuestionType.YesNo,
-			correct: YesNoAnswer.Yes
+			type: yesno,
+			correct: yes
 		},
 		{
 			id: "handicap.voertuig",
-			type: QuestionType.YesNo,
-			correct: YesNoAnswer.No
+			type: yesno,
+			correct: no
 		},
 		{
 			id: "bromfiets",
-			type: QuestionType.MultipleChoice,
+			type: choices,
 			correct: 0,
 			flags: QuestionOptions.CanRandomSort
 		}
@@ -171,42 +179,42 @@ export const Questions: Record<string, Question[]> =
 	[
 		{
 			id: "doorgaanderijbaan",
-			type: QuestionType.YesNo,
-			correct: YesNoAnswer.No
+			type: yesno,
+			correct: no
 		},
 		{
 			id: "weefstrook",
-			type: QuestionType.MultipleChoice,
+			type: choices,
 			correct: 0,
 			flags: QuestionOptions.CanRandomSort
 		},
 		{
 			id: "tankstation",
-			type: QuestionType.YesNo,
-			correct: YesNoAnswer.No
+			type: yesno,
+			correct: no
 		},
 		{
 			id: "stoep",
-			type: QuestionType.YesNo,
-			correct: YesNoAnswer.Yes
+			type: yesno,
+			correct: yes
 		},
 		{
 			id: "berm",
-			type: QuestionType.YesNo,
-			correct: YesNoAnswer.Yes
+			type: yesno,
+			correct: yes
 		},
 	],
 	"begrip.tijd":
 	[
 		{
 			id: "schemering",
-			type: QuestionType.MultipleChoice,
+			type: choices,
 			correct: 0,
 			flags: QuestionOptions.CanRandomSort
 		},
 		{
 			id: "nacht",
-			type: QuestionType.MultipleChoice,
+			type: choices,
 			correct: 0,
 			flags: QuestionOptions.CanRandomSort
 		},
@@ -215,49 +223,49 @@ export const Questions: Record<string, Question[]> =
 	[
 		{
 			id: "instappen",
-			type: QuestionType.YesNo,
-			correct: YesNoAnswer.No
+			type: yesno,
+			correct: no
 		},
 		{
 			id: "ladenlossen",
-			type: QuestionType.YesNo,
-			correct: YesNoAnswer.No
+			type: yesno,
+			correct: no
 		},
 		{
 			id: "winkelen",
-			type: QuestionType.YesNo,
-			correct: YesNoAnswer.Yes
+			type: yesno,
+			correct: yes
 		},
 	],
 	"militair":
 	[
 		{
 			id: "vlag.voorkant",
-			type: QuestionType.MultipleChoice,
+			type: choices,
 			correct: 1,
 			flags: QuestionOptions.CanRandomSort
 		},
 		{
 			id: "vlag.midden",
-			type: QuestionType.MultipleChoice,
+			type: choices,
 			correct: 1,
 			flags: QuestionOptions.CanReverse
 		},
 		{
 			id: "vlag.achterkant",
-			type: QuestionType.MultipleChoice,
+			type: choices,
 			correct: 0,
 			flags: QuestionOptions.CanRandomSort
 		},
 		{
 			id: "lamp.voorkant",
-			type: QuestionType.MultipleChoice,
+			type: choices,
 			correct: 1,
 			flags: QuestionOptions.CanRandomSort
 		},
 		{
 			id: "lamp.achterkant",
-			type: QuestionType.MultipleChoice,
+			type: choices,
 			correct: 2,
 			flags: QuestionOptions.CanRandomSort
 		}

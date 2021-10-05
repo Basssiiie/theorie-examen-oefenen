@@ -4,7 +4,6 @@
 	import type { Image } from "@services/images/types/Image";
 	import type { LocalisedQuestionText } from "@services/questions/types/LocalisedQuestionText";
 	import type { Question } from "@services/questions/types/Question";
-	import { QuestionType } from "@services/questions/types/QuestionType";
 	import { _, json, locale } from "svelte-i18n";
 	import MultipleChoice from "./answers/MultipleChoice.svelte";
 	import NumberEntry from "./answers/NumberEntry.svelte";
@@ -96,9 +95,9 @@
 		</div>
 
 		<div class="choices box">
-			{#if current.question.type === QuestionType.MultipleChoice || current.question.type === QuestionType.YesNo}
+			{#if current.question.type === "choices" || current.question.type === "yesno"}
 				<MultipleChoice question={current} />
-			{:else if current.question.type === QuestionType.NumberEntry}
+			{:else if current.question.type === "number"}
 				<NumberEntry question={current} />
 			{:else}
 				<p>Error: unknown entry type.</p>

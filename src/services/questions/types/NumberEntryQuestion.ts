@@ -1,5 +1,4 @@
 import type { QuestionBase } from "./QuestionBase";
-import type { QuestionType } from "./QuestionType";
 
 
 /**
@@ -8,7 +7,7 @@ import type { QuestionType } from "./QuestionType";
 export interface NumberEntryQuestion extends QuestionBase
 {
 	/** @inheritdoc */
-	type: QuestionType.NumberEntry;
+	type: "number";
 
 	/**
 	 * The number that is the answer to the question.
