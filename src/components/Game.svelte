@@ -1,5 +1,7 @@
 <script lang="ts">
 	import * as QuestionService from "@services/questions/QuestionService";
+	import * as ImageService from "@services/images/ImageService";
+	import type { Image } from "@services/images/types/Image";
 	import type { LocalisedQuestionText } from "@services/questions/types/LocalisedQuestionText";
 	import type { Question } from "@services/questions/types/Question";
 	import { QuestionType } from "@services/questions/types/QuestionType";
@@ -15,6 +17,7 @@
 	interface ActiveQuestion
 	{
 		question: Question;
+		image: Image | null;
 		localisation: LocalisedQuestionText;
 		answer: number | null;
 	}
@@ -33,8 +36,10 @@
 		else
 		{
 			const question = QuestionService.nextQuestion();
-			console.log(`New question: ${question.id}`);
+			const image = (question.image) ? ImageService.get(question.image) : null;
 			const localisation: LocalisedQuestionText = $json(question.id);
+
+			console.log(`New question: ${question.id}`);
 
 			if (!localisation)
 				throw Error(`Missing localisation for '${question.id}'`);
@@ -42,6 +47,7 @@
 			current = {
 				question: question,
 				localisation: localisation,
+				image: image,
 				answer: null
 			};
 			questions.push(current);
@@ -71,9 +77,19 @@
 	<h1>{$_("question")} {questionIndex + 1}{numberOfQuestions ? ` / ${numberOfQuestions}` : ''}</h1>
 
 	<form bind:this={form} on:submit|preventDefault={goNext} autocomplete="off">
-		<div class="picture box">
-			Afbeelding
-		</div>
+		{#if current.image}
+			<div class="picture box">
+				{#if current.image.type === "source"}
+					<img src={current.image.filepath} alt={$_(`images.${current.question.image}.alt`)} />
+				{:else if current.image.type === "component"}
+					{#if typeof current.question.image === "object" && current.question.image.params}
+						<svelte:component this={current.image.component} {...current.question.image.params} />
+					{:else}
+						<svelte:component this={current.image.component} />
+					{/if}
+				{/if}
+			</div>
+		{/if}
 
 		<div class="question box">
 			<label for="answer">{current.localisation.question}</label>
