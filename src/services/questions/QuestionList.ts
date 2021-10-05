@@ -11,7 +11,7 @@ const number: QuestionType = "number";
 const yes: YesNoAnswer = "yes";
 const no: YesNoAnswer = "no";
 
-export const Questions: Record<string, Question[]> =
+const questions =
 {
 	"snelheid.weg":
 	[
@@ -271,3 +271,15 @@ export const Questions: Record<string, Question[]> =
 		}
 	],
 };
+
+
+/**
+ * Union of all available question categories in the library.
+ */
+export type CategoryKeys = (keyof typeof questions);
+
+
+/**
+ * All question definitions present in the game, bundled in various categories.
+ */
+export const Questions: Record<CategoryKeys, Question[]> = questions;

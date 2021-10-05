@@ -34,7 +34,7 @@
 		}
 		else
 		{
-			const question = QuestionService.nextQuestion();
+			const question = QuestionService.next();
 			const image = (question.image) ? ImageService.get(question.image) : null;
 			const localisation: LocalisedQuestionText = $json(question.id);
 

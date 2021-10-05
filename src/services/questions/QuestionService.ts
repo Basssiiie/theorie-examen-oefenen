@@ -1,12 +1,13 @@
 import * as Random from "@utilities/Random";
 import { Questions } from "./QuestionList";
+import type { CategoryKeys } from "./QuestionList";
 import type { Question } from "./types/Question";
 
 
 /**
  * Gets the next question for the current round.
  */
-export function nextQuestion(): Question
+export function next(): Question
 {
 	const [groupId, question] = getRandomQuestion();
 
@@ -36,16 +37,16 @@ export function resetAllProgress(): void
 
 
 /** All available question categories. */
-const questionCategories = Object.keys(Questions);
+const questionCategories = <CategoryKeys[]>Object.keys(Questions);
 
 /** Key: group id, value: set of question id's that have been used. */
-const questionsAllTime = new Map<string, Set<string>>();
+const questionsAllTime = new Map<CategoryKeys, Set<string>>();
 
 /** Key: group id, value: used question id. */
-const questionsThisRound = new Map<string, string>();
+const questionsThisRound = new Map<CategoryKeys, string>();
 
 
-function getRandomQuestion(): [string, Question]
+function getRandomQuestion(): [CategoryKeys, Question]
 {
 	const availableCategories = questionCategories.filter(key => isQuestionGroupAvailable(key, Questions[key].length));
 	if (availableCategories.length == 0)
@@ -67,7 +68,7 @@ function getRandomQuestion(): [string, Question]
 }
 
 
-function markQuestionAsUsed(groupId: string, question: Question): void
+function markQuestionAsUsed(groupId: CategoryKeys, question: Question): void
 {
 	// Mark used in all time.
 	let usedQuestionsForGroup = questionsAllTime.get(groupId);
@@ -83,7 +84,7 @@ function markQuestionAsUsed(groupId: string, question: Question): void
 }
 
 
-function isQuestionGroupAvailable(groupId: string, questionCount: number): boolean
+function isQuestionGroupAvailable(groupId: CategoryKeys, questionCount: number): boolean
 {
 	if (!questionsThisRound.has(groupId))
 	{
