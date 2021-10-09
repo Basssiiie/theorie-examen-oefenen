@@ -1,5 +1,5 @@
 import type { QuestionBase } from "./QuestionBase";
-import type { QuestionOptions } from "./QuestionOptions";
+import type { ChoiceOptions } from "./ChoiceOptions";
 
 
 /**
@@ -16,7 +16,7 @@ export interface MultipleChoiceQuestion extends QuestionBase
 	correct: number;
 
 	/**
-	 * Specific options that can be set for this question.
+	 * Specifies if the choices should be reordered in a specific way.
 	 */
-	flags?: QuestionOptions;
+	reorder?: ChoiceOptions;
 }

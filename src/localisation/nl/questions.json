@@ -200,7 +200,7 @@
 			"schemering":
 			{
 				"question": "Welk antwoord is correct?",
-				"choices": [ "Voor schemering gelden dezelfde regels als overdag.", "Voor schemering gelden dezelfde regels als 's nachts.", "Voor schemering gelden andere regels dan overdag of 's nachts."],
+				"choices": [ "Voor schemering gelden dezelfde regels als overdag.", "Voor schemering gelden dezelfde regels als 's nachts.", "Voor schemering gelden andere regels dan overdag en 's nachts."],
 				"why": "Voor schemering gelden dezelfde regels als overdag. Er zijn geen speciale regels voor schemering en de regels voor 's nachts gaan pas in na zonsondergang."
 			},
 			"nacht":
@@ -261,5 +261,169 @@
 			"choices": [ "Blauw", "Wit", "Groen" ],
 			"why": "Het laatste voertuig in een militaire colonne hebben altijd een groene koplamp rechtsvoor en een normale koplamp linksvoor. Alle andere voertuigen in de colonne dragen een blauwe koplamp rechtsvoor en een normale koplamp linksvoor."
 		}
+	},
+	"voorrang":
+	{
+		"regels":
+		{
+			"oprit":
+			{
+				"question": "Je wilt vanaf de oprit de straat oprijden en er komt een auto van rechts. Wie heeft voorrang?",
+				"choices": [ "Jij", "De andere auto", "Diegene die als eerst is" ],
+				"why": "Vanaf een oprit de weg oprijden is een bijzondere manoeuvre en dat betekend dat je al het overige verkeer voor moet laten gaan."
+			}
+		},
+		"voetganger":
+		{
+			"blind":
+			{
+				"question": "Er staat iemand op de stoep langs de weg die met een witte stok met een of meer rode ringen naar de straat wijst. Wat doe je?",
+				"choices": [ "Je rijdt door.", "Je stopt en vraagt de persoon of er een probleem is.", "Je stopt en wacht tot de persoon oversteekt." ],
+				"why": "Mensen die een witte stok met één of meer rode ringen bij zich dragen zijn blind of slechtziend. Door met deze stok naar de weg te wijzen geven zij aan dat ze willen oversteken. Bestuurders moeten deze mensen in dat geval altijd voorrang verlenen. Je stopt dus en wacht tot de persoon oversteekt."
+			},
+			"oudere":
+			{
+				"question": "Een oudere met een rollator staat op de stoep langs de weg en wil oversteken. Deze persoon staat niet bij een zebrapad. Moet je stoppen?",
+				"why": "Mensen die slecht ter been zijn of niet goed kunnen zien hebben altijd voorrang bij het oversteken. Je stopt dus en wacht tot de persoon oversteekt."
+			}
+		}
+	},
+	"slepen":
+	{
+		"afstand":
+		{
+			"maximum":
+			{
+				"question": "Wat is de maximale afstand tussen een motorvoertuig die een ander motorvoertuig meesleept.",
+				"why": "De maximale afstand tussen het trekkende motorvoertuig en het meegesleepte motorvoertuig is 5 meter."
+			}
+		},
+		"vlag":
+		{
+			"question": "Je sleept met je auto een motorvoertuig mee aan een sleepkabel. Is het verplicht om voor de veiligheid een rode vlag in het midden van sleepkabel te hangen?",
+			"why": "Bij het slepen van een voertuig mag je voor de veiligheid een rode vlag in het midden van de sleepkabel hangen en waarschuwingsknipperlichten gebruiken. Dit is echter niet verplicht."
+		},
+		"verzekering":
+		{
+			"question": "Je sleept met je auto een motorvoertuig mee aan een sleepkabel. Moet het gesleepte voertuig minimaal WA verzekerd zijn?",
+			"why": "Het gesleepte voertuig moet voldoen aan de gebruikelijke eisen en dus altijd minimaal WA verzekerd (wettelijke aansprakelijkheidsverzekering). Tevens moet de bestuurder waar nodig in bezit zijn van een geldig rijbewijs."
+		},
+		"rijbewijs":
+		{
+			"question": "Je sleept met je auto een motorvoertuig mee aan een sleepkabel. Moet de bestuurder van het gesleepte voertuig bij het slepen in bezit zijn van een geldig rijbewijs?",
+			"why": "Ook tijdens het slepen moet de bestuurder voldoen aan de gebruikelijke eisen en in bezit zijn van een geldig rijbewijs."
+		},
+		"wielen":
+		{
+			"question": "Hoeveel wielen moet een voertuig minimaal hebben als je deze met een sleepkabel wilt meeslepen achter de auto.",
+			"why": "Het is niet toegestaan om een tweewielig motorvoertuig te slepen. Een driewielig motorvoertuig mag wel gesleept worden."
+		},
+		"bestuurder":
+		{
+			"question": "Je sleept met je auto een motorvoertuig mee aan een sleepkabel. Waar moet de bestuurder van het gesleepte motorvoertuig gaan zitten?",
+			"choices": [ "Achter het stuur van het gesleepte voertuig", "In de passagiersstoel van het gesleepte voertuig", "In de passagiersstoel van jouw auto" ],
+			"why": "Er moet altijd iemand achter het stuur van het gesleepte voertuig zitten, om bij de sturen als je een bocht maakt. Het gesleepte voertuig stuurt namelijk niet uit zichzelf."
+		},
+		"passagiers":
+		{
+			"question": "Je sleept met je auto een motorvoertuig mee aan een sleepkabel. Waar moeten de passagiers die in het gesleepte voertuig zaten gaan zitten?",
+			"choices": [ "Ze mogen in het gesleepte voertuig blijven", "Ze moeten zoveel mogelijk in jouw auto plaatsnemen, als daar plekken vrij zijn", "Ze moeten verspreid over jouw auto en het gesleepte voertuig plaatsnemen" ],
+			"why": "De passagiers die in het gesleepte voertuig zaten moeten zoveel mogelijk in jouw auto plaatsnemen. Dit zorgt ervoor dat het gesleepte voertuig minder zwaar is en dus veiliger te slepen is."
+		}
+	},
+	"verplichtingen":
+	{
+		"belasting":
+		{
+			"question": "Mag je met de auto de openbare weg op als je de motorrijtuigenbelasting (MRB) nog niet betaald hebt?",
+			"why": "De motorrijtuigenbelasting (ook wel wegenbelasting of ouderwets houderschapsbelasting genoemd) is een verplichte belasting die betaald moet zijn voordat je de openbare weg op mag."
+		},
+		"kentekencard":
+		{
+			"question": "Wat is de beste plek om het kentekenbewijs (kentekencard) van de auto te bewaren?",
+			"choices": [ "Thuis", "In de auto", "In de portemonnee van de bestuurder" ],
+			"why": "Het kentekenbewijs van de auto moet je altijd bij je hebben als je op pad gaat met deze auto. Het is alleen niet handig om hem in de auto te laten liggen, omdat je het kentekenbewijs nodig hebt om gemakkelijk aangifte te doen als de auto gestolen wordt."
+		},
+		"kenteken":
+		{
+			"zelfmaak":
+			{
+				"question": "Je bent een van je kentekenplaten kwijtgeraakt. Mag je een kopie van het kentekenplaat tekenen en die tijdelijk gebruiken op de auto tot je weer een nieuwe kentekenplaat hebt?",
+				"why": "Kentekenplaten zijn juridisch beschermd. Dit betekend dat alleen officiële instanties kentekenplaten mogen maken en uitgeven. Een onofficiële of getekende kentekenplaat gebruiken is verboden."
+			},
+			"verschillende":
+			{
+				"question": "Je bent een van je kentekenplaten kwijtgeraakt. Mag je tijdelijk een kenteken met een ander nummer erop gebruiken?",
+				"why": "Het is niet toegestaan twee verschillende kentekennummers op dezelfde auto te dragen. Het is ook niet toegestaan een kentekenplaat te gebruiken die niet geregistreerd staat op de desbetreffende auto."
+			},
+			"andere":
+			{
+				"question": "Je bent een van je kentekenplaten kwijtgeraakt. Mag je tijdelijk de kentekenplaten van een andere auto gebruiken?",
+				"why": "Het is niet toegestaan kentekenplaten te gebruiken van een andere auto. Elk kentekennummer is namelijk voor altijd gebonden aan een specifieke auto en kan nooit worden hergebruikt, zelfs als de oorspronkelijke auto al naar de sloop is."
+			}
+		}
+	},
+	"verboden":
+	{
+		"ongeluk":
+		{
+			"question": "Je raakt betrokken bij een ongeluk waarbij de andere auto een flinke klap krijgt. Mag je wegrijden om hulp te halen?",
+			"why": "Het is verboden om de plaats van een ongeval te verlaten waar kans bestaat dat er iemand gewond is geraakt. Het is dus ook niet toegestaan om door te rijden om hulp te halen."
+		},
+		"race":
+		{
+			"question": "Je staat bij een rood stoplicht en de auto naast je maakt zich klaar om met een flinke snelheid weg te rijden als het licht op groen springt. Wat doe je?",
+			"choices": [ "Je maakt je klaar om sneller weg te rijden dan de andere auto.", "Je kijkt hoe je genoeg afstand kan houden en de andere auto zo veilig mogelijk de ruimte kan geven.", "Je negeert de auto en focust je op je route." ],
+			"why": "Het is verboden een wedstrijd te houden met andere motorvoertuigen op de openbare weg. Als een andere auto het toch probeert is de beste optie om de veiligheid van jou en de rest van het verkeer te waarborgen door afstand te houden en de racer de ruimte te geven. Negeren is geen optie omdat de racer nog steeds onderdeel is van het verkeer en om de veiligheid te waarborgen moet je opletten om te anticiperen wat de racer gaat doen."
+		},
+		"laadruimte":
+		{
+			"aanhanger":
+			{
+				"question": "Je wilt met de aanhanger spullen wegbrengen. De buurkinderen willen graag meerijden in de bak van de aanhanger. Mag dit?",
+				"why": "Het is over het algemeen verboden passagiers mee te nemen in de laadruimte van de auto of de aanhanger. De wet biedt wel uitzonderingen voor hulpverleningsdiensten en vergunningen voor evenementen, maar even de buurkinderen in de aanhanger laten meerijden valt daar niet onder."
+			},
+			"pickup":
+			{
+				"question": "Je wilt met een pickup truck spullen wegbrengen. De buurkinderen willen graag meerijden in de bak van de pickup truck. Mag dit?",
+				"why": "Het is over het algemeen verboden passagiers mee te nemen in de laadruimte van de auto of de aanhanger. Dit geldt ook voor de laadbak van een pickup truck. De wet biedt wel uitzonderingen voor hulpverleningsdiensten en vergunningen voor evenementen, maar even de buurkinderen in de laadbak laten meerijden valt daar niet onder."
+			}
+		}
+	},
+	"gordels":
+	{
+		"kinderen":
+		{
+			"hals":
+			{
+				"question": "Een kind van 1,40 meter rijdt mee in de passagiersstoel met de diagonale gordelriem op de hals. Wat kun je het beste doen?",
+				"choices": [ "De gordel zo laten zitten", "De gordel achter de rug van het kind doen", "Het kind op een goedgekeurde zittingverhoger laten zitten" ],
+				"why": "Een gordel op de hals kan oncomfortabel en gevaarlijk zijn. Het gebruik van een driepuntsgordel is echter verplicht voor kinderen langer dan 1,35 meter, waardoor een goedgekeurde zittingverhoger in dit geval nodig is."
+			},
+			"verhoger":
+			{
+				"question": "Tot welke lengte (in centimeters) moeten kinderen verplicht een zittingverhoger of kinderzitje gebruiken als ze meerijden als passagier?",
+				"why": "Kinderen korter dan 1,35 meter (135 centimeter) moeten altijd een zittingverhoger of kinderzitje gebruiken. Kinderen langer dan 1,35 meter hoeven dat alleen als de diagonale gordelriem op de hals ligt."
+			}
+		}
+	},
+	"alcohol":
+	{
+		"afbraak1":
+		{
+			"question": "Hoeveel uur duurt het voordat een menselijk lichaam één standaard glas alcohol volledig heeft afgebroken?",
+			"why": "Het duurt anderhalf uur voordat een lichaam één standaard glas alcohol heeft afgebroken. Gedurende die tijd mag je geen motorvoertuigen besturen."
+		},
+		"afbraak5":
+		{
+			"question": "Hoeveel uur duurt het voordat een menselijk lichaam vijf standaard glazen alcohol volledig heeft afgebroken?",
+			"why": "Het duurt anderhalf uur per standaard glas alcohol. Voor vijf glazen duurt het 7,5 uur voordag een lichaam alles heeft afgebroken. Gedurende die tijd mag je geen motorvoertuigen besturen."
+		}
+	},
+	"leeg":
+	{
+		"question": "",
+		"choices": [ "", "", "" ],
+		"why": ""
 	}
 }

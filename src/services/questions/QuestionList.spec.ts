@@ -1,7 +1,7 @@
 import nl from "@localisation/nl/questions.json";
 import { addMessages, init, json } from "svelte-i18n";
 import { get } from 'svelte/store';
-import { Questions } from "./QuestionList";
+import { CategoryKeys, Questions } from "./QuestionList";
 import type { LocalisedQuestionText } from "./types/LocalisedQuestionText";
 
 
@@ -12,7 +12,7 @@ function forAllKeys(callback: (key: string) => void): void
 {
 	for (const categoryId in Questions)
 	{
-		const questionsIds = Questions[categoryId].map(q => q.id);
+		const questionsIds = Questions[<CategoryKeys>categoryId].map(q => q.id);
 		for (const id of questionsIds)
 		{
 			callback(`${categoryId}.${id}`);
