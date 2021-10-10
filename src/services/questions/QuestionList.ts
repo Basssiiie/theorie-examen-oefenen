@@ -29,7 +29,8 @@ const questions =
 		{ id: "snelweg.6h", type: number, correct: 100, image: G01 },
 		{ id: "snelweg.18h", type: number, correct: 100, image: G01 },
 		{ id: "snelweg.19h", type: number, correct: 130, image: G01 },
-		{ id: "autoweg", type: number, correct: 100, image: G03 }
+		{ id: "autoweg", type: number, correct: 100, image: G03 },
+		{ id: "buiten", type: number, correct: 80 },
 	],
 	"snelheid.voertuig":
 	[
@@ -38,7 +39,7 @@ const questions =
 		{ id: "caravan.zwaar", type: number, correct: 80 },
 		{ id: "caravan.licht", type: number, correct: 90 },
 		{ id: "fietsendrager", type: number, correct: 100 },
-		{ id: "vrachtwagen", type: number, correct: 80 }
+		{ id: "vrachtwagen", type: number, correct: 80 },
 	],
 	"begrip.verkeer":
 	[
@@ -126,6 +127,7 @@ const questions =
 		{ id: "ongeluk", type: yesno, correct: no },
 		{ id: "race", type: choices, correct: 1, reorder: random },
 		{ id: "laadruimte.aanhanger", type: yesno, correct: no },
+		{ id: "laadruimte.pickup", type: yesno, correct: no },
 
 	],
 	"gordels":
@@ -137,6 +139,15 @@ const questions =
 	[
 		{ id: "afbraak1", type: number, correct: 1.5 },
 		{ id: "afbraak5", type: number, correct: 7.5 },
+		{ id: "controle", type: yesno, correct: yes },
+		{ id: "beginner", type: choices, correct: 0, reorder: reverse },
+		{ id: "ervaren", type: choices, correct: 2, reorder: reverse },
+		{ id: "nullimiet", type: choices, correct: 2, reorder: reverse },
+	],
+	"straf":
+	[
+		{ id: "rijverbod", type: choices, correct: 0, reorder: reverse },
+		{ id: "misdrijf", type: yesno, correct: yes },
 	]
 };
 

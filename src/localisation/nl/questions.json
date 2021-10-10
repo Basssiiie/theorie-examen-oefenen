@@ -418,9 +418,46 @@
 		{
 			"question": "Hoeveel uur duurt het voordat een menselijk lichaam vijf standaard glazen alcohol volledig heeft afgebroken?",
 			"why": "Het duurt anderhalf uur per standaard glas alcohol. Voor vijf glazen duurt het 7,5 uur voordag een lichaam alles heeft afgebroken. Gedurende die tijd mag je geen motorvoertuigen besturen."
+		},
+		"controle":
+		{
+			"question": "Bij een controle op de openbare weg wordt je gevraagd of je een alcoholtest kunt doen voor 'voorlopig onderzoek'. Is dit verplicht?",
+			"why": "Het is altijd verplicht om mee te werken aan voorlopig onderzoek, ook als je geen alcohol hebt gedronken of als er geen alcohol gevonden wordt. Hier ga je akkoord mee op het moment dat je in de auto stapt. Je bent verplicht om alle aanwijzingen goed op te volgen."
+		},
+		"beginner":
+		{
+			"question": "Met hoeveel alcoholpromillage in hun adem moeten beginnende automobilisten mee moeten naar het politiebureau als ze getest worden?",
+			"choices": [ "0.2 ‰ (88 μg/l)", "0.4 ‰ (176 μg/l)", "0.5 ‰ (220 μg/l)" ],
+			"why": "Beginnende automobilisten moeten vanaf 0.2 promille (88 microgram per liter) al mee naar het politiebureau voor extra controle. Een standaard glas alcohol is ongeveer 0.2 tot 0.3 promille."
+		},
+		"ervaren":
+		{
+			"question": "Met hoeveel alcoholpromillage in hun adem moeten automobilisten met meer dan 5 jaar ervaring mee moeten naar het politiebureau als ze getest worden?",
+			"choices": [ "0.2 ‰ (88 μg/l)", "0.4 ‰ (176 μg/l)", "0.5 ‰ (220 μg/l)" ],
+			"why": "Automobilisten met meer dan 5 jaar ervaring moeten vanaf 0.5 promille (220 microgram per liter) mee naar het politiebureau voor extra controle. Een standaard glas alcohol is ongeveer 0.2 tot 0.3 promille."
+		},
+		"nullimiet":
+		{
+			"question": "Wat is het nul-limiet?",
+			"choices": [ "De maximum alcoholpromillage die een bestuurder in het bloed mag hebben", "De maximum hoeveelheid drugs die een bestuurder in het bloed mag hebben", "De maximum hoeveelheid alcohol en drugs die een bestuurder in het bloed mag hebben" ],
+			"why": "Het nul-limiet is het maximum dat een bestuurder mag nemen als zowel alcohol als drugs gecombineerd worden. Het limiet is dan voor alcohol 0.0 promille en voor drugs 0 gram, omdat het combineren gevaarlijk invloed kan uitoefenen op de rijvaardigheid!"
 		}
 	},
-	"leeg":
+	"straf":
+	{
+		"rijverbod":
+		{
+			"question": "Als de politie iemand een rijverbod geeft, wat houdt dat in?",
+			"choices": [ "De persoon mag tot maximaal 26 uur niet in deze auto rijden.", "De persoon mag tot maximaal 26 uur geen enkele auto besturen.", "De persoon mag tot maximaal 26 uur niet geen enkel voertuig besturen." ],
+			"why": "Als de politie iemand een rijverbod oplegt, bijvoorbeeld vals deze persoon teveel alcohol heeft gedronken, dan mag de persoon geen enkel voertuig meer besturen, inclusief fietsen en bromfietsen. Hoelang een verbod duurt hangt af van de daad of de hoeveelheid alcohol in het bloed."
+		},
+		"misdrijf":
+		{
+			"question": "De rechter veroordeeld je tot het plegen van een misdrijf in het verkeer. Heb je nu een strafblad?",
+			"why": "Als je een misdrijf pleegt in het verkeer, dan krijg je een strafbeeld. Voorbeelden van misdrijven zijn wegrijden bij een ongeval, met teveel alcohol op autorijden of niet meewerken met voorlopig onderzoek."
+		}
+	},
+	"empty":
 	{
 		"question": "",
 		"choices": [ "", "", "" ],

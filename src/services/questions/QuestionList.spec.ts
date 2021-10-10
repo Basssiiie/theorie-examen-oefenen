@@ -8,7 +8,7 @@ import type { LocalisedQuestionText } from "./types/LocalisedQuestionText";
 /**
  * Performs a callback for all questions in the question list.
  */
-function forAllKeys(callback: (key: string) => void): void
+function forAllQuestionKeys(callback: (key: string) => void): void
 {
 	for (const categoryId in Questions)
 	{
@@ -20,6 +20,32 @@ function forAllKeys(callback: (key: string) => void): void
 	}
 }
 
+/**
+ * Performs a callback for all questions in the specified localisation.
+ */
+function forAllLocalisedKeys(locals: Record<string, unknown>, callback: (key: string) => void): void
+{
+	function recursive(node: Record<string, unknown>, parents?: string): void
+	{
+		if ("question" in node)
+		{
+			if (parents)
+			{
+				callback(parents);
+			}
+			return;
+		}
+		for (const key in node)
+		{
+			if (key === "empty")
+				continue;
+
+			recursive(node[key] as Record<string, unknown>, (parents) ? `${parents}.${key}` : key);
+		}
+	}
+	recursive(locals);
+}
+
 
 describe("Question list", () =>
 {
@@ -28,7 +54,7 @@ describe("Question list", () =>
 		const map = new Map<string, number>();
 		const duplicates: string[] = [];
 
-		forAllKeys(key =>
+		forAllQuestionKeys(key =>
 		{
 			const count = (map.get(key) || 0);
 			map.set(key, count + 1);
@@ -48,14 +74,29 @@ describe("Question list", () =>
 		addMessages("nl", nl);
 		init({ initialLocale: "nl", fallbackLocale: "nl" });
 
-		const missing: unknown[] = [];
-
-		forAllKeys(key =>
+		const missing: string[] = [];
+		forAllQuestionKeys(key =>
 		{
 			const locals: LocalisedQuestionText | undefined = get(json)(key);
 
 			if (!locals || !locals.question)
 				missing.push(key);
+		});
+
+		expect(missing).toEqual([]);
+	});
+
+
+	test("All Dutch localised questions are used", () =>
+	{
+		const keys = new Set<string>();
+		forAllQuestionKeys(key => keys.add(key));
+
+		const missing: string[] = [];
+		forAllLocalisedKeys(nl, local =>
+		{
+			if (!keys.has(local))
+				missing.push(local);
 		});
 
 		expect(missing).toEqual([]);
