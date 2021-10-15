@@ -38,19 +38,23 @@
 		{
 			"aanhangwagen.zwaar":
 			{
-				"question": "Wat is de maximumsnelheid op de snelweg voor een auto met een aanhangwagen van meer dan 3500 kg?"
+				"question": "Wat is de maximumsnelheid op de snelweg voor een auto met een aanhangwagen van meer dan 3500 kg?",
+				"why": "De maximumsnelheid op de snelweg voor auto's met een aanhangwagen van meer dan 3500 kg is 80 km/u. Voor aanhangwagens van minder dan 3500 kg is het 90 km/u."
 			},
 			"aanhangwagen.licht":
 			{
-				"question": "Wat is de maximumsnelheid op de snelweg voor een auto met een aanhangwagen van minder dan 3500 kg?"
+				"question": "Wat is de maximumsnelheid op de snelweg voor een auto met een aanhangwagen van minder dan 3500 kg?",
+				"why": "De maximumsnelheid op de snelweg voor auto's met een aanhangwagen van minder dan 3500 kg is 90 km/u. Voor aanhangwagens van meer dan 3500 kg is het 80 km/u."
 			},
 			"caravan.zwaar":
 			{
-				"question": "Wat is de maximumsnelheid op de snelweg voor een auto met een caravan van meer dan 3500 kg?"
+				"question": "Wat is de maximumsnelheid op de snelweg voor een auto met een caravan van meer dan 3500 kg?",
+				"why": "Voor caravans gelden dezelfde regels als voor andere aanhangwagens. De maximumsnelheid op de snelweg voor auto's met een aanhangwagen van meer dan 3500 kg is 80 km/u. Voor aanhangwagens van minder dan 3500 kg is het 90 km/u."
 			},
 			"caravan.licht":
 			{
-				"question": "Wat is de maximumsnelheid op de snelweg voor een auto met een caravan van minder dan 3500 kg?"
+				"question": "Wat is de maximumsnelheid op de snelweg voor een auto met een caravan van minder dan 3500 kg?",
+				"why": "Voor caravans gelden dezelfde regels als voor andere aanhangwagens. De maximumsnelheid op de snelweg voor auto's met een aanhangwagen van minder dan 3500 kg is 90 km/u. Voor aanhangwagens van meer dan 3500 kg is het 80 km/u."
 			},
 			"fietsendrager":
 			{
@@ -59,7 +63,8 @@
 			},
 			"vrachtwagen":
 			{
-				"question": "Wat is de maximumsnelheid op de snelweg voor een vrachtwagen?"
+				"question": "Wat is de maximumsnelheid op de snelweg voor een vrachtwagen?",
+				"why": "De maximumsnelheid op de snelweg voor vrachtwagens is 80 km/u."
 			}
 		}
 	},
