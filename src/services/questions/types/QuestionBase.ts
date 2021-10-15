@@ -1,5 +1,4 @@
 import type { ImageKeys } from "@services/images/ImageList";
-import type { QuestionType } from "./QuestionType";
 
 /**
  * Base information for a question.
@@ -10,11 +9,6 @@ export interface QuestionBase
 	 * The id of the question, used for localisation.
 	 */
 	id: string;
-
-	/**
-	 * The type of question.
-	 */
-	type: QuestionType;
 
 	/**
 	 * Optional image from the image library, to be displayed alongside the question.

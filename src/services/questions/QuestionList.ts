@@ -1,8 +1,9 @@
 import type { ChoiceOptions } from "./types/ChoiceOptions";
 import type { Question } from "./types/Question";
-import type { QuestionType } from "./types/QuestionType";
 import type { YesNoAnswer } from "./types/YesNoQuestion";
 import type { ImageKeys } from "@services/images/ImageList";
+
+type QuestionType = Question["type"];
 
 // Shortcuts to improve minification
 const choices: QuestionType = "choices";
