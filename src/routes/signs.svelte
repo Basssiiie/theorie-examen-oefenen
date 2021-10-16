@@ -45,41 +45,48 @@
 
 
 <style>
-	.scaler {
+	.scaler
+	{
 		max-width: 400px;
 		width: 100%;
 	}
 
-	.scaler-input {
+	.scaler-input
+	{
 		width: 50px;
 	}
 
-	.scaler-range {
+	.scaler-range
+	{
 		display: block;
 		max-width: 400px;
 		width: 100%;
 	}
 
-	.flexbox {
+	.flexbox
+	{
 		display: flex;
 		flex-wrap: wrap;
 		align-items: center;
 	}
 
-	.sign-name {
+	.sign-name
+	{
 		font-family: sans-serif;
 		font-size: 20px;
 		text-align: center;
 		margin: 6px;
 	}
 
-	.sign-edit-number {
+	.sign-edit-number
+	{
 		width: calc(100% - 8px); /* Minus padding+border */
 		max-width: 75px;
 		margin: auto;
 	}
 
-	.sign {
+	.sign
+	{
 		border: 1px solid grey;
 		border-radius: 5px;
 		padding: 15px;
@@ -92,16 +99,19 @@
 		user-select: none;
 	}
 
-	.sign * {
+	.sign *
+	{
 		display: block;
 	}
 
-	.sign :global(svg) {
+	.sign :global(svg)
+	{
 		width: 100%;
 		height: 100%;
 	}
 
-	.sign :global(text::selection) {
+	.sign :global(text::selection)
+	{
 		background: none;
 	}
 </style>

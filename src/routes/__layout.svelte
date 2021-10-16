@@ -26,19 +26,29 @@
 
 <slot/>
 
-<p>
+<label class="language">
 	{$_("language")}:
 	<select bind:value={$locale}>
 		{#each $locales as locale}
 			<option value={locale}>{locale}</option>
 		{/each}
 	</select>
-</p>
+</label>
 
 
 <style>
 	:root
 	{
   		background: #EEE;
+		color: #333;
+		font-family: Arial, Helvetica, sans-serif;
+		letter-spacing: .03em;
+		line-height: 1.5em;
+	}
+
+	.language
+	{
+		display: block;
+		margin: 16px 0px;
 	}
 </style>

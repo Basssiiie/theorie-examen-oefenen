@@ -1,36 +1,27 @@
 <script lang="ts">
 	import * as QuestionService from "@services/questions/QuestionService";
 	import * as ImageService from "@services/images/ImageService";
-	import type { Image } from "@services/images/types/Image";
+	import { ActiveQuestion } from "@services/questions/types/ActiveQuestion";
 	import type { LocalisedQuestionText } from "@services/questions/types/LocalisedQuestionText";
-	import type { Question } from "@services/questions/types/Question";
-	import { _, json, locale } from "svelte-i18n";
 	import MultipleChoice from "./answers/MultipleChoice.svelte";
 	import NumberEntry from "./answers/NumberEntry.svelte";
+	import { writable } from "svelte/store";
+	import { _, json } from "svelte-i18n";
 
 	export let numberOfQuestions: number | null = null;
 
-	console.log(`[Game.svelte] Init game in language: ${$locale}`);
 	QuestionService.resetAllProgress();
 
-	interface ActiveQuestion
-	{
-		question: Question;
-		image: Image | null;
-		localisation: LocalisedQuestionText;
-		answer: number | null;
-	}
-
 	const questions: ActiveQuestion[] = [];
+	const active = writable<ActiveQuestion>();
 	let questionIndex = 0;
-	let current: ActiveQuestion;
 	let form: HTMLFormElement;
 
 	function update(): void
 	{
 		if (questionIndex < questions.length)
 		{
-			current = questions[questionIndex];
+			$active = questions[questionIndex];
 		}
 		else
 		{
@@ -43,22 +34,25 @@
 			if (!localisation)
 				throw Error(`Missing localisation for '${question.id}'`);
 
-			current = {
-				question: question,
-				localisation: localisation,
-				image: image,
-				answer: null
-			};
+			const current = new ActiveQuestion(question, localisation, image);
 			questions.push(current);
+			$active = current;
 		}
 	}
 	function goNext(): void
 	{
-		if (form.checkValidity())
+		if (!form.checkValidity())
+			return;
+
+		if ($active.isCorrect === null)
 		{
-			questionIndex++;
-			update();
+			$active.isCorrect = ($active.question.correct === $active.answer);
+			console.log(`Is correct: ${$active.isCorrect}`);
+			return;
 		}
+
+		questionIndex++;
+		update();
 	}
 	function goPrevious(): void
 	{
@@ -76,33 +70,35 @@
 	<h1>{$_("question")} {questionIndex + 1}{numberOfQuestions ? ` / ${numberOfQuestions}` : ''}</h1>
 
 	<form bind:this={form} on:submit|preventDefault={goNext} autocomplete="off">
-		{#if current.image}
+		{#if $active.image}
 			<div class="picture box">
-				{#if current.image.type === "source"}
-					<img src={current.image.filepath} alt={$_(`images.${current.question.image}.alt`)} />
-				{:else if current.image.type === "component"}
-					{#if typeof current.question.image === "object" && current.question.image.params}
-						<svelte:component this={current.image.component} {...current.question.image.params} />
-					{:else}
-						<svelte:component this={current.image.component} />
-					{/if}
+				{#if $active.image.type === "source"}
+					<img src={$active.image.filepath} alt={$_(`images.${$active.question.image}.alt`)} />
+				{:else if $active.image.type === "component"}
+					<svelte:component this={$active.image.component} {...((typeof $active.question.image === "object" && $active.question.image.params) ? $active.question.image.params : undefined)} />
 				{/if}
 			</div>
 		{/if}
 
 		<div class="question box">
-			<label for="answer">{current.localisation.question}</label>
+			<label for="answer" class="text">
+				{$active.localisation.question}
+			</label>
 		</div>
 
 		<div class="choices box">
-			{#if current.question.type === "choices" || current.question.type === "yesno"}
-				<MultipleChoice question={current} />
-			{:else if current.question.type === "number"}
-				<NumberEntry question={current} />
-			{:else}
-				<p>Error: unknown entry type.</p>
+			{#if $active.question.type === "choices" || $active.question.type === "yesno"}
+				<MultipleChoice question={$active} />
+			{:else if $active.question.type === "number"}
+				<NumberEntry question={$active} />
 			{/if}
 		</div>
+
+		{#if $active.isCorrect !== null}
+			<div class="reason box">
+				<p class="text">{$active.localisation.why || ""}</p>
+			</div>
+		{/if}
 
 		<button on:click={goPrevious} disabled={questionIndex <= 0} type="button">{$_("previous")}</button>
 		<button type="submit">{$_("next")}</button>
@@ -117,5 +113,11 @@
 		outline: blue solid 1px;
 		margin: 10px;
 		padding: 10px;
+	}
+
+	.text
+	{
+		display: block;
+		margin: 5px;
 	}
 </style>
