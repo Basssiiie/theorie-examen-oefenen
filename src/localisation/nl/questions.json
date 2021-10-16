@@ -471,6 +471,72 @@
 			"why": "Als je een misdrijf pleegt in het verkeer, dan krijg je een strafbeeld. Voorbeelden van misdrijven zijn wegrijden bij een ongeval, met teveel alcohol op autorijden of niet meewerken met voorlopig onderzoek."
 		}
 	},
+	"stoplicht":
+	{
+		"geel":
+		{
+			"question": "Mag je doorrijden als het stoplicht van groen op geel springt?",
+			"why": "Als je niet meer veilig kunt afremmen, dan mag je doorrijden een stoplicht van groen naar geel springt."
+		},
+		"knipper":
+		{
+			"question": "Je rijdt op een stoplicht af waarvan enkel de gele lamp knippert. Wat doe je?",
+			"choices": [ "Je kijkt goed om je heen en rijdt voorzichtig en veilig door", "Je stopt en keert om, want je mag niet verder", "Je belt 112, er is mogelijk een gevaar" ],
+			"why": "Als het gele licht van een stoplicht knippert, dan is het stoplicht kapot of inactief. Je wordt dan gewaarschuwd voor een gevaarlijk punt en mag je voorzichtig verdergaan. De gebruikelijke voorrangsregels nemen dan over."
+		},
+		"colonne":
+		{
+			"dwars":
+			{
+				"question": "Er rijdt een militaire colonne op de dwarsliggende weg voor je en je stoplicht springt op groen. Mag je nu doorrijden en de militaire colonne doorkruizen?",
+				"why": "Een militaire colonne mag doorrijden nadat hun stoplicht op rood springt. Je mag ze niet doorkruizen als jouw stoplicht daarna op groen springt."
+			},
+			"ingevoegd":
+			{
+				"question": "Je komt met de auto tussen de voertuigen van een militaire colonne terecht. Bij een stoplicht rijden de voertuigen verder door rood. Mag je ze volgen?",
+				"why": "Een militaire colonne mag doorrijden nadat hun stoplicht op rood springt. Je mag ze niet volgen als je zelf geen deel uit maakt van de militaire colonne."
+			}
+		}
+	},
+	"kantstrepen":
+	{
+		"geel":
+		{
+			"doorgetrokken":
+			{
+				"question": "Je rijdt een straat in met gele doorgetrokken kantstrepen. Wat houdt dat precies in?",
+				"choices": [ "Je mag niet parkeren naast de streep", "Je mag niet laden of lossen naast de streep", "Je mag niet stilstaan naast de streep" ],
+				"why": "Je mag niet stilstaan naast de streep. Hoewel dit ook inhoudt dat je niet mag parkeren en niet mag laden of lossen, is niet mogen stilstaan de meest precieze beschrijving van een gele doorgetrokken streep."
+			},
+			"onderbroken":
+			{
+				"question": "Je rijdt een straat in met gele onderbroken kantstrepen. Wat houdt dat precies in?",
+				"choices": [ "Je mag niet parkeren naast de streep", "Je mag niet laden of lossen naast de streep", "Je mag niet stilstaan naast de streep" ],
+				"why": "Je mag niet parkeren naast de streep. Je mag wel kort stilstaan, of laden of lossen, naast een gele doorgetrokken streep."
+			}
+		},
+		"blauw":
+		{
+			"question": "Je rijdt een straat in met blauwe doorgetrokken kantstrepen. Wat houdt dat precies in?",
+			"choices": [ "Je bent in een parkeerzone en moet bij het parkeren de parkeerschijf gebruiken", "Je bent in een met camera's beveiligde zone waar je veilig kunt parkeren", "Je bent in een zone waar je niet langs de strepen mag parkeren" ],
+			"why": "Een blauwe doorgetrokken kantstreep houdt in dat je in een blauwe zone bent. In blauwe zones moet je bij het parkeren altijd gebruik maken van een parkeerschijf."
+		}
+	},
+	"markeringen":
+	{
+		"blokmarkering":
+		{
+			"question": "Je rijdt op een rijstrook met een blokmarkering tussen de twee rijstroken. Wat houdt dat precies in?",
+			"choices": [ "Je mag over de markering rijden naar de andere rijbaan", "Je mag pas nadat de markering ophoudt naar de andere rijbaan", "Je mag niet over de markering rijden naar de andere rijbaan" ],
+			"why": "Een blokmarkering is een onderbroken streep van vierkante blokken die meestal bij invoeg- uitrijstroken op de snelweg te vinden is, en bij splitsingen op andere wegen. Het is toegestaan deze blokmarkering te overschrijden als je naar de andere kant wilt."
+		},
+		"verdrijvingsvlak":
+		{
+			"question": "Wat is een verdrijvingsvlak precies?",
+			"choices": [ "Een vlak waar je niet mag parkeren", "Een vlak waar je niet mag stilstaan", "Een vlak waar je niet op mag komen" ],
+			"why": "Een verdrijvingsvlak is een vlak met schuine strepen waar je niet op of overheen mag rijden. Indirect betekend dat ook dat je er niet mag parkeren of stilstaan."
+		}
+	},
 	"empty":
 	{
 		"question": "",

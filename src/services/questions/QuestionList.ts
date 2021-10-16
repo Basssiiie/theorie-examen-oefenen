@@ -150,7 +150,25 @@ const questions =
 	[
 		{ id: "rijverbod", type: choices, correct: 0, reorder: reverse },
 		{ id: "misdrijf", type: yesno, correct: yes },
-	]
+	],
+	"stoplicht":
+	[
+		{ id: "geel", type: yesno, correct: yes },
+		{ id: "knipper", type: choices, correct: 0, reorder: random },
+		{ id: "colonne.dwars", type: yesno, correct: no },
+		{ id: "colonne.ingevoegd", type: yesno, correct: no },
+	],
+	"kantstrepen":
+	[
+		{ id: "geel.doorgetrokken", type: choices, correct: 2, reorder: random },
+		{ id: "geel.onderbroken", type: choices, correct: 0, reorder: random },
+		{ id: "blauw", type: choices, correct: 0, reorder: random },
+	],
+	"markeringen":
+	[
+		{ id: "blokmarkering", type: choices, correct: 0, reorder: random },
+		{ id: "verdrijvingsvlak", type: choices, correct: 2, reorder: random },
+	],
 };
 
 
