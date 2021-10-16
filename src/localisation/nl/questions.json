@@ -273,9 +273,18 @@
 		{
 			"oprit":
 			{
-				"question": "Je wilt vanaf de oprit de straat oprijden en er komt een auto van rechts. Wie heeft voorrang?",
-				"choices": [ "Jij", "De andere auto", "Diegene die als eerst is" ],
-				"why": "Vanaf een oprit de weg oprijden is een bijzondere manoeuvre en dat betekend dat je al het overige verkeer voor moet laten gaan."
+				"rechts":
+				{
+					"question": "Je wilt vanaf de oprit de straat oprijden en er komt een auto van rechts. Wie heeft voorrang?",
+					"choices": [ "Jij", "De andere auto", "Diegene die als eerst is" ],
+					"why": "Vanaf een oprit de weg oprijden is een bijzondere manoeuvre en dat betekend dat je al het overige verkeer voor moet laten gaan."
+				},
+				"links":
+				{
+					"question": "Je wilt vanaf de oprit de straat oprijden en er komt een auto van links. Wie heeft voorrang?",
+					"choices": [ "Jij", "De andere auto", "Diegene die als eerst is" ],
+					"why": "Vanaf een oprit de weg oprijden is een bijzondere manoeuvre en dat betekend dat je al het overige verkeer voor moet laten gaan."
+				}
 			}
 		},
 		"voetganger":

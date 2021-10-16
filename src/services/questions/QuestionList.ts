@@ -98,7 +98,8 @@ const questions =
 	],
 	"voorrang.regels":
 	[
-		{ id: "oprit", type: choices, correct: 1, reorder: random },
+		{ id: "oprit.rechts", type: choices, correct: 1, reorder: random },
+		{ id: "oprit.links", type: choices, correct: 1, reorder: random },
 	],
 	"voorrang.voetganger":
 	[
