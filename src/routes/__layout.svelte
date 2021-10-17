@@ -39,7 +39,7 @@
 <style>
 	:root
 	{
-  		background: #EEE;
+  		background: #DDD;
 		color: #333;
 		font-family: Arial, Helvetica, sans-serif;
 		letter-spacing: .03em;
