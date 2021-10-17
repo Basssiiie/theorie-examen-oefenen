@@ -125,6 +125,11 @@
 				"question": "Vallen skateboarders onder het begrip 'bestuurder'?",
 				"why": "Mensen op een skateboard zijn voetgangers omdat een skateboard geen voertuig is. Voetgangers vallen niet onder het begrip 'bestuurder'."
 			},
+			"ruiter":
+			{
+				"question": "Vallen ruiters onder het begrip 'bestuurder'?",
+				"why": "Ruiters (mensen op een paard) zijn bestuurders, omdat 'bestuurders' alle weggebruikers zijn behalve voetgangers. Een ruiter is geen voetganger, dus wel een bestuurder."
+			},
 			"geleider.geit":
 			{
 				"question": "Valt een boer die met zijn geiten de straat oversteekt onder het begrip 'bestuurder'?",
@@ -285,6 +290,24 @@
 					"choices": [ "Jij", "De andere auto", "Diegene die als eerst is" ],
 					"why": "Vanaf een oprit de weg oprijden is een bijzondere manoeuvre en dat betekend dat je al het overige verkeer voor moet laten gaan."
 				}
+			},
+			"kruispunt":
+			{
+				"question": "Je wilt een gelijkwaardig kruispunt oprijden en er komt een auto van links. Wie heeft voorrang?",
+				"choices": [ "Jij", "De andere auto", "Diegene die als eerst is" ],
+				"why": "Een gelijkwaardig kruispunt is een kruispunt zonder enige verkeerstekens die voorrang verlenen. Hier geldt de hoofdregel waar bestuurders van rechts als eerste voorrang krijgen. In dit geval kom jij van rechts vanuit het oogpunt van de andere bestuurder."
+			},
+			"onverhard":
+			{
+				"question": "Je wilt vanaf een zandpad een geasfalteerde weg oprijden en er komt een auto van links. Wie heeft voorrang?",
+				"choices": [ "Jij", "De andere auto", "Diegene die als eerst is" ],
+				"why": "Als je op een onverharde weg rijdt, zoals een zandpad, dan moet je altijd voorrang geven aan bestuurders op verharde wegen."
+			},
+			"tram":
+			{
+				"question": "Je wilt een gelijkwaardig kruispunt met een trambaan oprijden en er komt een tram van links. Wie heeft voorrang?",
+				"choices": [ "Jij", "De tram", "Diegene die als eerst is" ],
+				"why": "Een tram heeft altijd voorrang op een gelijkwaardig kruispunt, ook als jij vanuit het oogpunt van de tram van rechts komt."
 			}
 		},
 		"voetganger":
@@ -299,6 +322,39 @@
 			{
 				"question": "Een oudere met een rollator staat op de stoep langs de weg en wil oversteken. Deze persoon staat niet bij een zebrapad. Moet je stoppen?",
 				"why": "Mensen die slecht ter been zijn of niet goed kunnen zien hebben altijd voorrang bij het oversteken. Je stopt dus en wacht tot de persoon oversteekt."
+			}
+		},
+		"versmalling":
+		{
+			"voetganger":
+			{
+				"question": "Je nadert een versmalling met bord F6 en er komt een voetganger aan in de tegengestelde richting. Moet de voetganger jou voorrang geven?",
+				"why": "De verplichtingen van bord F6 gelden alleen bestuurders. De voetganger mag dus gewoon doorlopen en je moet de persoon voorrang geven als deze de versmalling in loopt."
+			},
+			"eerst":
+			{
+				"question": "Je nadert een versmalling met bord F5 en er komt een auto aan in de tegengestelde richting. De auto is de versmalling nog niet ingereden. Mag je nu als eerste?",
+				"why": "Bij een versmalling met bord F5 ben je verplicht aankomende tegenliggers voorrang te geven."
+			},
+			"telaat":
+			{
+				"question": "Je nadert een versmalling met bord F6 en er is al een auto op de versmalling. Overtreedt deze auto de regels?",
+				"why": "Als er al een auto aanwezig is op de versmalling als je aankomt, dan ben je verplicht deze auto de ruimte te geven om de versmalling te verlaten. Pas nadat de auto verder is mag je zelf doorrijden."
+			}
+		},
+		"sirene":
+		{
+			"aan":
+			{
+				"question": "Je wilt een gelijkwaardig kruispunt oprijden en er komt een ambulance met de sirenes aan van links. Wie heeft voorrang?",
+				"choices": [ "Jij", "De ambulance", "Diegene die als eerst is" ],
+				"why": "Ambulances en andere voorrangsvoertuigen moeten altijd voorrang krijgen als de zwaailichten en geluidssignalen aan staan."
+			},
+			"uit":
+			{
+				"question": "Je wilt een gelijkwaardig kruispunt oprijden en er komt een ambulance zonder zwaailichten aan van links. Wie heeft voorrang?",
+				"choices": [ "Jij", "De ambulance", "Diegene die als eerst is" ],
+				"why": "Ambulances en andere voorrangsvoertuigen die niet hun zwaailichten en geluidssignalen aan hebben volgen de gebruikelijke regels. In dit geval kom jij vanuit het oogpunt van de ambulance van rechts en heb je dus voorrang."
 			}
 		}
 	},
@@ -535,6 +591,134 @@
 			"question": "Wat is een verdrijvingsvlak precies?",
 			"choices": [ "Een vlak waar je niet mag parkeren", "Een vlak waar je niet mag stilstaan", "Een vlak waar je niet op mag komen" ],
 			"why": "Een verdrijvingsvlak is een vlak met schuine strepen waar je niet op of overheen mag rijden. Indirect betekend dat ook dat je er niet mag parkeren of stilstaan."
+		}
+	},
+	"fietsstrook":
+	{
+		"doorgetrokken":
+		{
+			"question": "Mag je met de auto over een fietsstrook met een doorgetrokken tussenstreep rijden?",
+			"why": "Een fietsstrook naast de rijstrook met een doorgetrokken tussenstreep mag alleen gebruikt worden door bestuurders van fietsen, snorfietsen en gehandicaptenvoertuigen. Een bestuurder van een auto mag niet over een fietsstrook met een doorgetrokken tussenstreep rijden, om bijvoorbeeld af te slaan of te laden en te lossen."
+		},
+		"onderbroken":
+		{
+			"question": "Mag je met de auto over een fietsstrook met een onderbroken tussenstreep rijden?",
+			"why": "Een fietsstrook naast de rijstrook met een onderbroken tussenstreep mag gebruikt worden door alle bestuurders op de weg. Let er wel op dat je bij het gebruiken van de fietsstrook niemand hindert."
+		},
+		"suggestie":
+		{
+			"question": "Wat is het visuele verschil tussen een fietsstrook en een fietssuggestiestrook?",
+			"choices": [ "Een fietsstrook is altijd rood en een fietssuggestiestrook niet", "Een fietsstrook heeft altijd doorgetrokken lijnen en een fietssuggestiestrook heeft onderbroken lijnen", "Een fietsstrook heeft altijd een afbeelding van een fiets en een fietssuggestiestrook niet" ],
+			"why": "Een fietssuggestiestrook heeft geen afbeelding van een fiets terwijl een fietsstrook dat wel heeft. Fietsstroken zijn wettelijk bepaald en daar hangen de gebruikelijke regels aan. Fietssuggestiestroken zijn dat niet en hebben dus geen speciale regels. Beide stroken mogen echter alle kleuren en alle lijnsoorten gebruiken."
+		}
+	},
+	"plek":
+	{
+		"beste":
+		{
+			"question": "Wat is de beste plek om te rijden?",
+			"choices": [ "In het midden van de meest rechtse rijstrook", "Zoveel mogelijk aan de rechterkant van de weg", "Zoveel mogelijk in het midden van de weg" ],
+			"why": "De beste plek is om altijd in het midden van de meest rechtse rijstrook te rijden. Bij een weg met maar één rijstrook is dat het midden van de weg, maar bij wegen met meer dan één rijstrook is dat in het midden van de meeste rechtse rijstrook. Als je wilt inhalen mag je, mits het toegestaan en veilig is, naar andere rijstroken gaan."
+		}
+	},
+	"handicap":
+	{
+		"stoep":
+		{
+			"question": "Mag een gehandicaptenvoertuig over de stoep?",
+			"why": "Een gehandicaptenvoertuig mag gebruikmaken van de stoep, voetpaden, fietspaden en de rijbaan. Ze mogen niet op de autoweg of snelweg."
+		},
+		"fietspad":
+		{
+			"question": "Mag een gehandicaptenvoertuig over fietspaden rijden?",
+			"why": "Een gehandicaptenvoertuig mag gebruikmaken van de stoep, voetpaden, fietspaden en de rijbaan. Ze mogen niet op de autoweg of snelweg."
+		},
+		"autoweg":
+		{
+			"question": "Mag een gehandicaptenvoertuig de autoweg op?",
+			"why": "Een gehandicaptenvoertuig mag gebruikmaken van de stoep, voetpaden, fietspaden en de rijbaan. Ze mogen niet op de autoweg of snelweg."
+		},
+		"snelweg":
+		{
+			"question": "Mag een gehandicaptenvoertuig de autosnelweg op?",
+			"why": "Een gehandicaptenvoertuig mag gebruikmaken van de stoep, voetpaden, fietspaden en de rijbaan. Ze mogen niet op de autoweg of snelweg."
+		}
+	},
+	"tram":
+	{
+		"parkeren":
+		{
+			"question": "Mag je op een trambaan parkeren?",
+			"why": "Er zijn geen regels over wat wel of niet mag op een trambaan. Technisch gezien mag je dus parkeren op een trambaan zolang je niemand (waaronder trams) hindert."
+		},
+		"stilstaan":
+		{
+			"question": "Mag je met de auto op een trambaan stilstaan?",
+			"why": "Er zijn geen regels over wat wel of niet mag op een trambaan. Dus als de trambaan onderdeel is van de reguliere weg, mag je op de trambaan stilstaan zolang je niemand (waaronder trams) hindert en geen andere regels overtreedt."
+		}
+	},
+	"bushalte":
+	{
+		"voorrang":
+		{
+			"binnen":
+			{
+				"question": "Je rijdt met de auto langs een bushalte binnen de bebouwde kom. De bus geeft met een knipperlicht aan dat hij weg wil rijden. Moet je de bus voorrang geven?",
+				"why": "Binnen de bebouwde kom moet je de bus voorrang geven als deze weg wil rijden van een bushalte. Buiten de bebouwde kom is dit niet het geval."
+			},
+			"buiten":
+			{
+				"question": "Je rijdt met de auto langs een bushalte buiten de bebouwde kom. De bus geeft met een knipperlicht aan dat hij weg wil rijden. Moet je de bus voorrang geven?",
+				"why": "Binnen de bebouwde kom moet je de bus voorrang geven als deze weg wil rijden van een bushalte. Buiten de bebouwde kom is dit niet het geval."
+			}
+		}
+	},
+	"inhalen":
+	{
+		"rechts":
+		{
+			"question": "Mag je in sommige gevallen iemand aan de rechterkant inhalen in plaats van de linkerkant?",
+			"why": "In sommige gevallen mag je iemand rechts inhalen in plaats van links. Bijvoorbeeld als deze persoon aangeeft naar links te willen afslaan, of in een file, of vlak voor of op de rotonde met meerdere rijstroken."
+		},
+		"invoegen":
+		{
+			"question": "Mag je op de snelweg iemand van rechts inhalen als je op een invoegstrook met blokmarkering rijdt?",
+			"why": "Op de invoegstrook met blokmarkering aan de rechterkant is het toegestaan om bestuurders van rechts in te halen, als dit leidt tot veiliger invoegen."
+		},
+		"rotonde":
+		{
+			"question": "Mag je op een meerbaanse rotonde iemand aan de rechterkant inhalen?",
+			"why": "Op een meerbaanse rotonde mag je aan de rechterkant inhalen, zolang er niemand gehinderd wordt en er geen andere regels overtreden worden."
+		},
+		"snelweg":
+		{
+			"question": "Mag je iemand op de snelweg aan de rechterkant inhalen als deze persoon op de meest linker rijstrook rijdt?",
+			"why": "Het is niet toegestaan iemand rechts in te halen als deze persoon niet netjes op de rechter rijstroken rijdt."
+		},
+		"tram":
+		{
+			"question": "Mag je een tram aan de rechterkant inhalen?",
+			"why": "Het is toegestaan om een tram aan de rechterkant in te halen, omdat het voor een tram niet altijd mogelijk is om op de meest rechtse rijstrook te rijden."
+		},
+		"zebrapad":
+		{
+			"question": "Je komt een auto tegen die staat te wachten voor een zebrapad. Mag je deze auto inhalen?",
+			"why": "Het is niet toegestaan om iemand in te halen die staat te wachten bij een zebrapad, omdat de kans dan groot is dat je de personen op het zebrapad aanrijdt."
+		}
+	},
+	"remmen":
+	{
+		"stopafstand":
+		{
+			"question": "Wat is de stopafstand?",
+			"choices": [ "Remweg minus reactietijd", "Reactietijd plus remweg", "Remweg" ],
+			"why": "De stopafstand is de totale afstand die een auto aflegd vanaf het moment dat er gereageerd moet worden tot het moment dat de auto stilstaat. De stopafstand is dus reactietijd én remweg bij elkaar."
+		},
+		"remweg":
+		{
+			"question": "Wat is de remweg?",
+			"choices": [ "Stopafstand minus reactietijd", "Reactietijd plus stopafstand", "Stopafstand" ],
+			"why": "De remweg is de totale afstand die een auto aflegd vanaf het moment dat men begint met remmen tot het moment dat de auto stilstaat. De remweg is dus de totale stopafstand minus de reactietijd."
 		}
 	},
 	"empty":

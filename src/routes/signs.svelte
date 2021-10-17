@@ -111,7 +111,7 @@
 	{
 		font-family: sans-serif;
 		font-size: 20px;
-		margin: 6px;
+		margin: 2px;
 		text-align: center;
 	}
 
@@ -120,14 +120,14 @@
 		display: block;
 		font-size: 0.7em;
 		line-height: 1.5em;
-		margin: 0px 4px;
+		margin: 0px 4px 4px 4px;
 		text-align: center;
 	}
 
 	.sign-edit-number
 	{
 		display: block;
-		margin: 8px auto 15px auto;
+		margin: 4px auto 8px auto;
 		max-width: 75px;
 		width: calc(100% - 8px); /* Minus padding+border */
 	}

@@ -14,6 +14,9 @@ const number: QuestionType = "number";
 const yes: YesNoAnswer = "yes";
 const no: YesNoAnswer = "no";
 
+//const A01: ImageKeys = "A01";
+const F05: ImageKeys = "F05";
+const F06: ImageKeys = "F06";
 const G01: ImageKeys = "G01";
 const G03: ImageKeys = "G03";
 
@@ -57,6 +60,7 @@ const questions =
 	[
 		{ id: "voetganger", type: yesno, correct: no },
 		{ id: "skateboard", type: yesno, correct: no },
+		{ id: "ruiter", type: yesno, correct: yes },
 		{ id: "geleider.geit", type: yesno, correct: yes },
 		{ id: "geleider.hond", type: yesno, correct: no },
 		{ id: "instructeur", type: choices, correct: 1, reorder: random },
@@ -100,11 +104,25 @@ const questions =
 	[
 		{ id: "oprit.rechts", type: choices, correct: 1, reorder: random },
 		{ id: "oprit.links", type: choices, correct: 1, reorder: random },
+		{ id: "kruispunt", type: choices, correct: 0, reorder: random },
+		{ id: "onverhard", type: choices, correct: 1, reorder: random },
+		{ id: "tram", type: choices, correct: 1, reorder: random },
 	],
 	"voorrang.voetganger":
 	[
 		{ id: "blind", type: choices, correct: 2, reorder: group_1_2 },
 		{ id: "oudere", type: yesno, correct: yes },
+	],
+	"voorrang.versmalling":
+	[
+		{ id: "voetganger", type: yesno, correct: no, image: F06 },
+		{ id: "eerst", type: yesno, correct: no, image: F05 },
+		{ id: "telaat", type: yesno, correct: no, image: F06 },
+	],
+	"voorrang.sirene":
+	[
+		{ id: "aan", type: choices, correct: 1, reorder: random },
+		{ id: "uit", type: choices, correct: 0, reorder: random },
 	],
 	"slepen":
 	[
@@ -168,6 +186,48 @@ const questions =
 	[
 		{ id: "blokmarkering", type: choices, correct: 0, reorder: random },
 		{ id: "verdrijvingsvlak", type: choices, correct: 2, reorder: random },
+	],
+	"fietsstrook":
+	[
+		{ id: "doorgetrokken", type: yesno, correct: no },
+		{ id: "onderbroken", type: yesno, correct: yes },
+		{ id: "suggestie", type: choices, correct: 2, reorder: random },
+	],
+	"plek":
+	[
+		{ id: "beste", type: choices, correct: 0, reorder: random },
+	],
+	"handicap":
+	[
+		{ id: "stoep", type: yesno, correct: no },
+		{ id: "fietspad", type: yesno, correct: no },
+		{ id: "autoweg", type: yesno, correct: yes },
+		{ id: "snelweg", type: yesno, correct: yes },
+	],
+	"tram":
+	[
+		{ id: "parkeren", type: yesno, correct: no },
+		{ id: "stilstaan", type: yesno, correct: yes },
+		{ id: "suggestie", type: choices, correct: 2, reorder: random },
+	],
+	"bushalte":
+	[
+		{ id: "voorrang.binnen", type: yesno, correct: yes },
+		{ id: "voorrang.buiten", type: yesno, correct: no },
+	],
+	"inhalen":
+	[
+		{ id: "rechts", type: yesno, correct: yes },
+		{ id: "invoegen", type: yesno, correct: yes },
+		{ id: "rotonde", type: yesno, correct: yes },
+		{ id: "snelweg", type: yesno, correct: no },
+		{ id: "tram", type: yesno, correct: yes },
+		{ id: "zebrapad", type: yesno, correct: no },
+	],
+	"remmen":
+	[
+		{ id: "stopafstand", type: choices, correct: 1, reorder: group_2_1 },
+		{ id: "remweg", type: choices, correct: 0, reorder: group_2_1 },
 	],
 };
 
