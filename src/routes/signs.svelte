@@ -17,7 +17,7 @@
 
 	// From: https://wetten.overheid.nl/BWBR0004825/2021-07-01/#Bijlage1
 	const signs: Sign[] = [
-		{ component: A01, name: "A01", description: "Maximumsnelheid", param: "number" },
+		{ component: A01, name: "A01", description: "Maximumsnelheid", param: "number", value: 50 },
 		{ component: F05, name: "F05", description: "Verbod voor bestuurders door te gaan bij nadering van verkeer uit tegengestelde richting" },
 		{ component: F06, name: "F06", description: "Bestuurders uit tegengestelde richting moeten verkeer dat van deze richting nadert voor laten gaan" },
 		{ component: G01, name: "G01", description: "Autosnelweg" },
