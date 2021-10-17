@@ -25,6 +25,7 @@
 	];
 
 	let scale = 50;
+	$: size = (scale / 100) * 300;
 </script>
 
 
@@ -37,9 +38,9 @@
 
 <section class="flexbox">
 	{#each signs as sign}
-		<div class="sign" style="max-width:{(scale / 100) * 300}px">
+		<div class="sign" style="max-width:{size + 30}px">
 			<figure>
-				<div class="sign-image" style="height:{(scale / 100) * 300}px">
+				<div class="sign-image" style="height:{size}px">
 					<svelte:component this={sign.component} value={sign.value} />
 				</div>
 				<figcaption>
@@ -81,6 +82,31 @@
 		flex-wrap: wrap;
 	}
 
+	.sign
+	{
+		border: 1px solid grey;
+		border-radius: 5px;
+		height: 100%;
+		margin: 15px;
+
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+	}
+
+	.sign figure
+	{
+		margin: 0px;
+	}
+
+	.sign-image
+	{
+		box-sizing: border-box;
+		padding: 15px;
+		width: 100%;
+	}
+
 	.sign-name
 	{
 		font-family: sans-serif;
@@ -94,34 +120,16 @@
 		display: block;
 		font-size: 0.7em;
 		line-height: 1.5em;
+		margin: 0px 4px;
 		text-align: center;
 	}
 
 	.sign-edit-number
 	{
 		display: block;
-		margin: 8px auto 0px auto;
+		margin: 8px auto 15px auto;
 		max-width: 75px;
 		width: calc(100% - 8px); /* Minus padding+border */
-	}
-
-	.sign
-	{
-		border: 1px solid grey;
-		border-radius: 5px;
-   		height: 100%;
-		margin: 15px;
-		padding: 15px;
-
-		-webkit-user-select: none;
-		-moz-user-select: none;
-		-ms-user-select: none;
-		user-select: none;
-	}
-
-	.sign figure
-	{
-		margin: 0px;
 	}
 
 	.sign :global(svg)
