@@ -50,7 +50,11 @@ function getRandomQuestion(): [CategoryKeys, Question]
 {
 	const availableCategories = questionCategories.filter(key => isQuestionGroupAvailable(key, Questions[key].length));
 	if (availableCategories.length == 0)
-		throw Error("Out of question categories!");
+	{
+		console.log("Out of question categories! Reset the round...");
+		resetRound();
+		return getRandomQuestion();
+	}
 
 	const nextCategoryId = Random.take(availableCategories);
 	const previouslyUsedQuestions = questionsAllTime.get(nextCategoryId);

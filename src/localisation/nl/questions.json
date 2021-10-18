@@ -391,13 +391,13 @@
 		"bestuurder":
 		{
 			"question": "Je sleept met je auto een motorvoertuig mee aan een sleepkabel. Waar moet de bestuurder van het gesleepte motorvoertuig gaan zitten?",
-			"choices": [ "Achter het stuur van het gesleepte voertuig", "In de passagiersstoel van het gesleepte voertuig", "In de passagiersstoel van jouw auto" ],
+			"choices": [ "Achter het stuur van het gesleepte voertuig.", "In de passagiersstoel van het gesleepte voertuig.", "In de passagiersstoel van jouw auto." ],
 			"why": "Er moet altijd iemand achter het stuur van het gesleepte voertuig zitten, om bij de sturen als je een bocht maakt. Het gesleepte voertuig stuurt namelijk niet uit zichzelf."
 		},
 		"passagiers":
 		{
 			"question": "Je sleept met je auto een motorvoertuig mee aan een sleepkabel. Waar moeten de passagiers die in het gesleepte voertuig zaten gaan zitten?",
-			"choices": [ "Ze mogen in het gesleepte voertuig blijven", "Ze moeten zoveel mogelijk in jouw auto plaatsnemen, als daar plekken vrij zijn", "Ze moeten verspreid over jouw auto en het gesleepte voertuig plaatsnemen" ],
+			"choices": [ "Ze mogen in het gesleepte voertuig blijven.", "Ze moeten zoveel mogelijk in jouw auto plaatsnemen, als daar plekken vrij zijn.", "Ze moeten verspreid over jouw auto en het gesleepte voertuig plaatsnemen." ],
 			"why": "De passagiers die in het gesleepte voertuig zaten moeten zoveel mogelijk in jouw auto plaatsnemen. Dit zorgt ervoor dat het gesleepte voertuig minder zwaar is en dus veiliger te slepen is."
 		}
 	},
@@ -509,7 +509,7 @@
 		"nullimiet":
 		{
 			"question": "Wat is het nul-limiet?",
-			"choices": [ "De maximum alcoholpromillage die een bestuurder in het bloed mag hebben", "De maximum hoeveelheid drugs die een bestuurder in het bloed mag hebben", "De maximum hoeveelheid alcohol en drugs die een bestuurder in het bloed mag hebben" ],
+			"choices": [ "De maximum alcoholpromillage die een bestuurder in het bloed mag hebben.", "De maximum hoeveelheid drugs die een bestuurder in het bloed mag hebben.", "De maximum hoeveelheid alcohol en drugs die een bestuurder in het bloed mag hebben." ],
 			"why": "Het nul-limiet is het maximum dat een bestuurder mag nemen als zowel alcohol als drugs gecombineerd worden. Het limiet is dan voor alcohol 0.0 promille en voor drugs 0 gram, omdat het combineren gevaarlijk invloed kan uitoefenen op de rijvaardigheid!"
 		}
 	},
@@ -519,7 +519,7 @@
 		{
 			"question": "Als de politie iemand een rijverbod geeft, wat houdt dat in?",
 			"choices": [ "De persoon mag tot maximaal 26 uur niet in deze auto rijden.", "De persoon mag tot maximaal 26 uur geen enkele auto besturen.", "De persoon mag tot maximaal 26 uur niet geen enkel voertuig besturen." ],
-			"why": "Als de politie iemand een rijverbod oplegt, bijvoorbeeld vals deze persoon teveel alcohol heeft gedronken, dan mag de persoon geen enkel voertuig meer besturen, inclusief fietsen en bromfietsen. Hoelang een verbod duurt hangt af van de daad of de hoeveelheid alcohol in het bloed."
+			"why": "Als de politie iemand een rijverbod oplegt, bijvoorbeeld als deze persoon teveel alcohol heeft gedronken, dan mag de persoon geen enkel voertuig meer besturen, inclusief fietsen en bromfietsen. Hoelang een verbod duurt hangt af van de daad of de hoeveelheid alcohol in het bloed."
 		},
 		"misdrijf":
 		{
@@ -537,7 +537,7 @@
 		"knipper":
 		{
 			"question": "Je rijdt op een stoplicht af waarvan enkel de gele lamp knippert. Wat doe je?",
-			"choices": [ "Je kijkt goed om je heen en rijdt voorzichtig en veilig door", "Je stopt en keert om, want je mag niet verder", "Je belt 112, er is mogelijk een gevaar" ],
+			"choices": [ "Je kijkt goed om je heen en rijdt voorzichtig en veilig door.", "Je stopt en keert om, want je mag niet verder.", "Je belt 112, er is mogelijk een gevaar." ],
 			"why": "Als het gele licht van een stoplicht knippert, dan is het stoplicht kapot of inactief. Je wordt dan gewaarschuwd voor een gevaarlijk punt en mag je voorzichtig verdergaan. De gebruikelijke voorrangsregels nemen dan over."
 		},
 		"colonne":
@@ -561,20 +561,20 @@
 			"doorgetrokken":
 			{
 				"question": "Je rijdt een straat in met gele doorgetrokken kantstrepen. Wat houdt dat precies in?",
-				"choices": [ "Je mag niet parkeren naast de streep", "Je mag niet laden of lossen naast de streep", "Je mag niet stilstaan naast de streep" ],
+				"choices": [ "Je mag niet parkeren naast de streep.", "Je mag niet laden of lossen naast de streep.", "Je mag niet stilstaan naast de streep." ],
 				"why": "Je mag niet stilstaan naast de streep. Hoewel dit ook inhoudt dat je niet mag parkeren en niet mag laden of lossen, is niet mogen stilstaan de meest precieze beschrijving van een gele doorgetrokken streep."
 			},
 			"onderbroken":
 			{
 				"question": "Je rijdt een straat in met gele onderbroken kantstrepen. Wat houdt dat precies in?",
-				"choices": [ "Je mag niet parkeren naast de streep", "Je mag niet laden of lossen naast de streep", "Je mag niet stilstaan naast de streep" ],
+				"choices": [ "Je mag niet parkeren naast de streep.", "Je mag niet laden of lossen naast de streep.", "Je mag niet stilstaan naast de streep." ],
 				"why": "Je mag niet parkeren naast de streep. Je mag wel kort stilstaan, of laden of lossen, naast een gele doorgetrokken streep."
 			}
 		},
 		"blauw":
 		{
 			"question": "Je rijdt een straat in met blauwe doorgetrokken kantstrepen. Wat houdt dat precies in?",
-			"choices": [ "Je bent in een parkeerzone en moet bij het parkeren de parkeerschijf gebruiken", "Je bent in een met camera's beveiligde zone waar je veilig kunt parkeren", "Je bent in een zone waar je niet langs de strepen mag parkeren" ],
+			"choices": [ "Je bent in een parkeerzone en moet bij het parkeren de parkeerschijf gebruiken.", "Je bent in een met camera's beveiligde zone waar je veilig kunt parkeren.", "Je bent in een zone waar je niet langs de strepen mag parkeren." ],
 			"why": "Een blauwe doorgetrokken kantstreep houdt in dat je in een blauwe zone bent. In blauwe zones moet je bij het parkeren altijd gebruik maken van een parkeerschijf."
 		}
 	},
@@ -583,13 +583,13 @@
 		"blokmarkering":
 		{
 			"question": "Je rijdt op een rijstrook met een blokmarkering tussen de twee rijstroken. Wat houdt dat precies in?",
-			"choices": [ "Je mag over de markering rijden naar de andere rijbaan", "Je mag pas nadat de markering ophoudt naar de andere rijbaan", "Je mag niet over de markering rijden naar de andere rijbaan" ],
+			"choices": [ "Je mag over de markering rijden naar de andere rijbaan.", "Je mag pas nadat de markering ophoudt naar de andere rijbaan.", "Je mag niet over de markering rijden naar de andere rijbaan." ],
 			"why": "Een blokmarkering is een onderbroken streep van vierkante blokken die meestal bij invoeg- uitrijstroken op de snelweg te vinden is, en bij splitsingen op andere wegen. Het is toegestaan deze blokmarkering te overschrijden als je naar de andere kant wilt."
 		},
 		"verdrijvingsvlak":
 		{
 			"question": "Wat is een verdrijvingsvlak precies?",
-			"choices": [ "Een vlak waar je niet mag parkeren", "Een vlak waar je niet mag stilstaan", "Een vlak waar je niet op mag komen" ],
+			"choices": [ "Een vlak waar je niet mag parkeren.", "Een vlak waar je niet mag stilstaan.", "Een vlak waar je niet op mag komen." ],
 			"why": "Een verdrijvingsvlak is een vlak met schuine strepen waar je niet op of overheen mag rijden. Indirect betekend dat ook dat je er niet mag parkeren of stilstaan."
 		}
 	},
@@ -608,7 +608,7 @@
 		"suggestie":
 		{
 			"question": "Wat is het visuele verschil tussen een fietsstrook en een fietssuggestiestrook?",
-			"choices": [ "Een fietsstrook is altijd rood en een fietssuggestiestrook niet", "Een fietsstrook heeft altijd doorgetrokken lijnen en een fietssuggestiestrook heeft onderbroken lijnen", "Een fietsstrook heeft altijd een afbeelding van een fiets en een fietssuggestiestrook niet" ],
+			"choices": [ "Een fietsstrook is altijd rood en een fietssuggestiestrook niet.", "Een fietsstrook heeft altijd doorgetrokken lijnen en een fietssuggestiestrook heeft onderbroken lijnen.", "Een fietsstrook heeft altijd een afbeelding van een fiets en een fietssuggestiestrook niet." ],
 			"why": "Een fietssuggestiestrook heeft geen afbeelding van een fiets terwijl een fietsstrook dat wel heeft. Fietsstroken zijn wettelijk bepaald en daar hangen de gebruikelijke regels aan. Fietssuggestiestroken zijn dat niet en hebben dus geen speciale regels. Beide stroken mogen echter alle kleuren en alle lijnsoorten gebruiken."
 		}
 	},
@@ -617,7 +617,7 @@
 		"beste":
 		{
 			"question": "Wat is de beste plek om te rijden?",
-			"choices": [ "In het midden van de meest rechtse rijstrook", "Zoveel mogelijk aan de rechterkant van de weg", "Zoveel mogelijk in het midden van de weg" ],
+			"choices": [ "In het midden van de meest rechtse rijstrook.", "Zoveel mogelijk aan de rechterkant van de weg.", "Zoveel mogelijk in het midden van de weg." ],
 			"why": "De beste plek is om altijd in het midden van de meest rechtse rijstrook te rijden. Bij een weg met maar één rijstrook is dat het midden van de weg, maar bij wegen met meer dan één rijstrook is dat in het midden van de meeste rechtse rijstrook. Als je wilt inhalen mag je, mits het toegestaan en veilig is, naar andere rijstroken gaan."
 		}
 	},
@@ -649,7 +649,7 @@
 		"parkeren":
 		{
 			"question": "Mag je op een trambaan parkeren?",
-			"why": "Er zijn geen regels over wat wel of niet mag op een trambaan. Technisch gezien mag je dus parkeren op een trambaan zolang je niemand (waaronder trams) hindert."
+			"why": "Er zijn geen regels over wat wel of niet mag op een trambaan. Technisch gezien mag je dus parkeren op een trambaan zolang je niemand (waaronder trams) hindert. Dit kan bijvoorbeeld op trambanen die niet meer in gebruik zijn."
 		},
 		"stilstaan":
 		{
@@ -682,7 +682,7 @@
 		},
 		"invoegen":
 		{
-			"question": "Mag je op de snelweg iemand van rechts inhalen als je op een invoegstrook met blokmarkering rijdt?",
+			"question": "Mag je op de snelweg iemand van rechts inhalen als je op een invoegstrook met blokmarkering aan de linkerkant rijdt?",
 			"why": "Op de invoegstrook met blokmarkering aan de rechterkant is het toegestaan om bestuurders van rechts in te halen, als dit leidt tot veiliger invoegen."
 		},
 		"rotonde":
@@ -719,6 +719,16 @@
 			"question": "Wat is de remweg?",
 			"choices": [ "Stopafstand minus reactietijd", "Reactietijd plus stopafstand", "Stopafstand" ],
 			"why": "De remweg is de totale afstand die een auto aflegd vanaf het moment dat men begint met remmen tot het moment dat de auto stilstaat. De remweg is dus de totale stopafstand minus de reactietijd."
+		},
+		"afstand":
+		{
+			"question": "Vul het nummer aan: als je twee keer zo snel rijdt, wordt de remweg (aantal) keer zo lang.",
+			"why": "Als je twee keer zo snel rijdt, wordt de remweg (exclusief reactietijd) vier keer zo lang."
+		},
+		"seconden":
+		{
+			"question": "Hoeveel seconden afstand moet er minimaal zijn tussen jouw auto en de auto voor je?",
+			"why": "Als je twee keer zo snel rijdt, wordt de remweg (exclusief reactietijd) vier keer zo lang."
 		}
 	},
 	"empty":

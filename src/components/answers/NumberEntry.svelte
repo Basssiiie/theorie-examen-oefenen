@@ -38,7 +38,7 @@
 
 <input bind:value={input} disabled={question.isCorrect !== null}
 	id="answer" class={css} placeholder={$_("game.numberentry.placeholder")}
-	min="0" type="number" inputmode="numeric" autocomplete="off" required />
+	min="0" type="number" step="0.01" inputmode="numeric" autocomplete="off" required />
 
 
 <style>

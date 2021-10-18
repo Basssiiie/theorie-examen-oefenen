@@ -166,7 +166,7 @@ const questions =
 	],
 	"straf":
 	[
-		{ id: "rijverbod", type: choices, correct: 0, reorder: reverse },
+		{ id: "rijverbod", type: choices, correct: 2, reorder: reverse },
 		{ id: "misdrijf", type: yesno, correct: yes },
 	],
 	"stoplicht":
@@ -199,16 +199,15 @@ const questions =
 	],
 	"handicap":
 	[
-		{ id: "stoep", type: yesno, correct: no },
-		{ id: "fietspad", type: yesno, correct: no },
-		{ id: "autoweg", type: yesno, correct: yes },
-		{ id: "snelweg", type: yesno, correct: yes },
+		{ id: "stoep", type: yesno, correct: yes },
+		{ id: "fietspad", type: yesno, correct: yes },
+		{ id: "autoweg", type: yesno, correct: no },
+		{ id: "snelweg", type: yesno, correct: no },
 	],
 	"tram":
 	[
-		{ id: "parkeren", type: yesno, correct: no },
+		{ id: "parkeren", type: yesno, correct: yes },
 		{ id: "stilstaan", type: yesno, correct: yes },
-		{ id: "suggestie", type: choices, correct: 2, reorder: random },
 	],
 	"bushalte":
 	[
@@ -228,6 +227,8 @@ const questions =
 	[
 		{ id: "stopafstand", type: choices, correct: 1, reorder: group_2_1 },
 		{ id: "remweg", type: choices, correct: 0, reorder: group_2_1 },
+		{ id: "afstand", type: number, correct: 4 },
+		{ id: "seconden", type: number, correct: 2 },
 	],
 };
 
