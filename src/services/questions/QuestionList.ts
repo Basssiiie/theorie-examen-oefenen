@@ -36,6 +36,11 @@ const questions =
 		{ id: "autoweg", type: number, correct: 100, image: G03 },
 		{ id: "buiten", type: number, correct: 80 },
 	],
+	"snelheid.minimum":
+	[
+		{ id: "snelweg", type: number, correct: 60, image: G01 },
+		{ id: "autoweg", type: number, correct: 50, image: G03 },
+	],
 	"snelheid.voertuig":
 	[
 		{ id: "aanhangwagen.zwaar", type: number, correct: 80 },
@@ -230,6 +235,41 @@ const questions =
 		{ id: "afstand", type: number, correct: 4 },
 		{ id: "seconden", type: number, correct: 2 },
 	],
+	"mobiel":
+	[
+		{ id: "woonerf", type: yesno, correct: no },
+		{ id: "brug", type: yesno, correct: yes },
+		{ id: "parkeren", type: yesno, correct: yes },
+	],
+	"profieldiepte":
+	[
+		{ id: "regulier", type: number, correct: 1.6 },
+		{ id: "winter", type: number, correct: 4 },
+	],
+	"weg":
+	[
+		{ id: "erftoegang", type: number, correct: 60 },
+		{ id: "gebiedsontsluiting", type: number, correct: 80 },
+		{ id: "stroom", type: choices, correct: 2, reorder: reverse },
+		{ id: "groen", type: choices, correct: 2, reorder: random },
+	],
+	"licht":
+	[
+		{ id: "tunnel", type: choices, correct: 0, reorder: random },
+		{ id: "stadslicht", type: choices, correct: 1, reorder: random },
+		{ id: "grootlicht", type: yesno, correct: no },
+	],
+	"mistlicht":
+	[
+		{ id: "300m", type: choices, correct: 0, reorder: random },
+		{ id: "150m", type: choices, correct: 1, reorder: random },
+		{ id: "voor.afstand", type: number, correct: 200 },
+		{ id: "voor.regen", type: yesno, correct: yes },
+		{ id: "voor.sneeuw", type: yesno, correct: yes },
+		{ id: "achter.afstand", type: number, correct: 50 },
+		{ id: "achter.regen", type: yesno, correct: no },
+		{ id: "achter.sneeuw", type: yesno, correct: yes },
+	]
 };
 
 

@@ -34,6 +34,19 @@
 				"why": "Als je niet op een snelweg of autoweg zit en er zijn geen andere borden die een snelheid aangeven, dan is de standaard maximum snelheid buiten de bebouwde kom 80 km/u."
 			}
 		},
+		"minimum":
+		{
+			"snelweg":
+			{
+				"question": "Hoeveel kilometer per uur moet een voertuig minimaal kunnen rijden om op de snelweg te mogen?",
+				"why": "Een voertuig moet minimaal 60 kilometer per uur kunnen rijden om op de snelweg te mogen rijden. Dit heet de minimumconstructiesnelheid en is niet hetzelfde als een minimumsnelheid. Op de snelweg geldt geen minimumsnelheid, omdat het toegestaan is om langzamer rijden als er bijvoorbeeld een file is."
+			},
+			"autoweg":
+			{
+				"question": "Hoeveel kilometer per uur moet een voertuig minimaal kunnen rijden om op de snelweg te mogen?",
+				"why": "Een voertuig moet minimaal 50 kilometer per uur kunnen rijden om op de autoweg te mogen rijden. Dit heet de minimumconstructiesnelheid en is niet hetzelfde als een minimumsnelheid. Op de autoweg geldt geen minimumsnelheid, omdat het toegestaan is om langzamer rijden als er bijvoorbeeld een file is."
+			}
+		},
 		"voertuig":
 		{
 			"aanhangwagen.zwaar":
@@ -729,6 +742,133 @@
 		{
 			"question": "Hoeveel seconden afstand moet er minimaal zijn tussen jouw auto en de auto voor je?",
 			"why": "Als je twee keer zo snel rijdt, wordt de remweg (exclusief reactietijd) vier keer zo lang."
+		}
+	},
+	"mobiel":
+	{
+		"woonerf":
+		{
+			"question": "Je wordt gebeld terwijl je een woonerf inrijdt. Mag je de telefoon pakken en opnemen?",
+			"why": "Tijdens het rijden is het niet toegestaan mobiele apparaten vast te houden of te bedienen. Dit is namelijk erg gevaarlijk, omdat er dan geen aandacht meer is op de weg en op wat het andere verkeer doet."
+		},
+		"brug":
+		{
+			"question": "Je wordt gebeld terwijl je stilstaat voor een open brug. Mag je de telefoon pakken en opnemen?",
+			"why": "Het is toegestaan om mobiele apparaten te bedienen terwijl je stilstaat, bijvoorbeeld voor een openstaande brug. Alleen tijdens het rijden is het strict verboden mobiele apparaten te bedienen."
+		},
+		"parkeren":
+		{
+			"question": "Je wordt gebeld terwijl je stilstaat op een parkeerplaats. Mag je de telefoon pakken en opnemen?",
+			"why": "Het is toegestaan om mobiele apparaten te bedienen terwijl je stilstaat, bijvoorbeeld op een parkeerplaats. Alleen tijdens het rijden is het strict verboden mobiele apparaten te bedienen."
+		}
+	},
+	"profieldiepte":
+	{
+		"regulier":
+		{
+			"question": "Wat is de minimale profieldiepte in millimeters voor reguliere autobanden?",
+			"why": "Reguliere autobanden moeten minimaal een profieldiepte van 1,6 millimeter hebben om gebruikt te mogen worden. Als ze een dunnere profieldiepte krijgen moeten ze vervangen worden. Nieuwe banden hebben meestal een profieldiepte van 8 millimeter."
+		},
+		"winter":
+		{
+			"question": "Wat is de minimale profieldiepte in millimeters voor winterbanden?",
+			"why": "Winterbanden moeten minimaal een profieldiepte van 4 millimeter om gebruikt te mogen worden als winterband. Als ze een dunnere profieldiepte krijgen moeten ze vervangen worden."
+		}
+	},
+	"weg":
+	{
+		"erftoegang":
+		{
+			"question": "Wat is de maximumsnelheid op een erftoegangsweg buiten de bebouwde kom?",
+			"why": "De maximumsnelheid op een erftoegangsweg buiten de bebouwde kom is 60 km/u. Deze wegen zijn te herkennen aan de onderbroken kantstrepen."
+		},
+		"gebiedsontsluiting":
+		{
+			"question": "Wat is de maximumsnelheid op een gebiedsontsluitingsweg buiten de bebouwde kom?",
+			"why": "De maximumsnelheid op een gebiedsontsluitingsweg buiten de bebouwde kom is 80 km/u. Deze wegen zijn te herkennen aan de dubbele middenstrepen en onderbroken kantstrepen."
+		},
+		"stroom":
+		{
+			"question": "Wat zijn stroomwegen?",
+			"choices": [ "Autowegen", "Autosnelwegen", "Autowegen en autosnelwegen" ],
+			"why": "Een stroomweg is een andere benaming voor autowegen en autosnelwegen. Een stroomautoweg is te herkennen aan de groene middenstreep en doorgetrokken kantstrepen."
+		},
+		"groen":
+		{
+			"question": "Welke wegen zijn te herkennen aan de groene middenstreep?",
+			"choices": [ "Erftoegangsweg", "Gebiedsontsluitingswegen", "Stroomwegen" ],
+			"why": "Stroomwegen (ook wel bekend als autowegen) zijn te herkennen aan de groene middenstreep en de doorgetrokken kantstrepen."
+		}
+	},
+	"licht":
+	{
+		"tunnel":
+		{
+			"question": "Je rijdt een tunnel in. Welke lichten moeten aan?",
+			"choices": [ "Dimlicht", "Stadslicht", "Groot licht" ],
+			"why": "In tunnels moet altijd dimlicht gevoerd worden. Stadslicht gebruik je alleen bij parkeren en stilstaan en groot licht alleen in het donker als er geen tegenliggers zijn."
+		},
+		"stadslicht":
+		{
+			"question": "Het is nacht. Wanneer moet het stadslicht gebruikt worden?",
+			"choices": [ "Bij het rijden binnen de bebouwde kom.", "Bij het parkeren of stilstaan.", "Bij het rijden op een woonerf."],
+			"why": "Het stadslicht moet alleen gebruikt worden bij parkeren en stilstaan in het donker en bij slecht zicht. Op de andere genoemde momenten moet je dimlicht voeren, als het donker is of het zicht slecht is."
+		},
+		"grootlicht":
+		{
+			"question": "Is het toegestaan om groot licht te voeren bij slecht zicht overdag?",
+			"why": "Het is niet toegestaan om groot licht te voeren overdag. Er zijn geen uitzonderingen. Groot licht mag enkel 's nachts gebruikt worden als er geen andere bestuurders dicht voor je rijden of je tegemoet komen."
+		}
+	},
+	"mistlicht":
+	{
+		"300m":
+		{
+			"question": "Het is mistig en je hebt ongeveer 300 meter zicht. Welke lichten moeten aan?",
+			"choices": [ "Dimlicht", "Mistlicht", "Groot licht" ],
+			"why": "Het mistvoorlicht mag pas aan bij minder dan 200 meter zicht en het mistachterlicht pas bij minder dan 50 meter zicht. Bij 300 meter zicht moet je dus dimlicht gebruiken. Groot licht mag alleen aan in het donker en zonder tegenliggers."
+		},
+		"150m":
+		{
+			"question": "Het is mistig en je hebt ongeveer 150 meter zicht. Welke lichten moeten aan?",
+			"choices": [ "Dimlicht", "Mistvoorlicht", "Groot licht" ],
+			"why": "Het mistvoorlicht mag aan bij minder dan 200 meter zicht. Als het zicht minder dan 50 meter is, moet het mistachterlicht ook aan. Als het mistlicht aan staat is het dragen van dimlicht optioneel. Groot licht mag alleen aan in het donker en zonder tegenliggers."
+		},
+		"voor":
+		{
+			"afstand":
+			{
+				"question": "Het mistvoorlicht mag alleen gebruikt worden bij minder dan hoeveel meter zicht?",
+				"why": "Het mistvoorlicht mag aan bij minder dan 200 meter zicht. Als het zicht minder dan 50 meter is, moet het mistachterlicht ook aan."
+			},
+			"regen":
+			{
+				"question": "Is het toegestaan om het mistvoorlicht te gebruiken bij hevige regenval?",
+				"why": "Het is toegestaan om het mistvoorlicht te gebruiken bij hevige regen- of sneeuwval, als het zicht daarbij minder dan 200 meter is geworden."
+			},
+			"sneeuw":
+			{
+				"question": "Is het toegestaan om het mistvoorlicht te gebruiken bij hevige sneeuwval?",
+				"why": "Het is toegestaan om het mistvoorlicht te gebruiken bij hevige regen- of sneeuwval, als het zicht daarbij minder dan 200 meter is geworden."
+			}
+		},
+		"achter":
+		{
+			"afstand":
+			{
+				"question": "Het mistachterlicht mag alleen gebruikt worden bij minder dan hoeveel meter zicht?",
+				"why": "Het mistachterlicht moet aan bij minder dan 50 meter zicht. Het mistvoorlicht moet al aan bij minder dan 200 meter zicht."
+			},
+			"regen":
+			{
+				"question": "Is het toegestaan om het mistachterlicht te gebruiken bij hevige regenval?",
+				"why": "Het is niet toegestaan om het mistachterlicht te gebruiken bij hevige regenval, omdat de regen de felle rode lampen versterkt en daarmee de bestuurders achter de auto kan verblinden. Het is wel toegestaan om het mistachterlicht te gebruiken bij hevige sneeuwval, als het zicht daarbij minder dan 50 meter is geworden."
+			},
+			"sneeuw":
+			{
+				"question": "Is het toegestaan om het mistachterlicht te gebruiken bij hevige sneeuwval?",
+				"why": "Het is toegestaan om het mistachterlicht te gebruiken bij hevige sneeuwval, als het zicht daarbij minder dan 50 meter is geworden. Het is niet toegestaan om het mistachterlicht te gebruiken bij hevige regenval, omdat de regen de felle rode lampen versterkt en daarmee de bestuurders achter de auto kan verblinden."
+			}
 		}
 	},
 	"empty":
