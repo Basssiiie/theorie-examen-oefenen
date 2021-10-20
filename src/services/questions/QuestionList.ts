@@ -180,6 +180,7 @@ const questions =
 		{ id: "knipper", type: choices, correct: 0, reorder: random },
 		{ id: "colonne.dwars", type: yesno, correct: no },
 		{ id: "colonne.ingevoegd", type: yesno, correct: no },
+		{ id: "uitvaart", type: yesno, correct: yes },
 	],
 	"kantstrepen":
 	[
@@ -258,6 +259,7 @@ const questions =
 		{ id: "tunnel", type: choices, correct: 0, reorder: random },
 		{ id: "stadslicht", type: choices, correct: 1, reorder: random },
 		{ id: "grootlicht", type: yesno, correct: no },
+		{ id: "kapot", type: yesno, correct: no },
 	],
 	"mistlicht":
 	[
@@ -269,7 +271,54 @@ const questions =
 		{ id: "achter.afstand", type: number, correct: 50 },
 		{ id: "achter.regen", type: yesno, correct: no },
 		{ id: "achter.sneeuw", type: yesno, correct: yes },
-	]
+	],
+	"apk":
+	[
+		{ id: "betekenis", type: choices, correct: 0, reorder: random },
+		{ id: "bewijs", type: choices, correct: 2, reorder: random },
+	],
+	"parkeren.voorrangsweg":
+	[
+		{ id: "buiten", type: yesno, correct: no },
+		{ id: "binnen", type: yesno, correct: yes },
+		{ id: "berm", type: yesno, correct: yes },
+	],
+	"parkeren":
+	[
+		{ id: "kruispunt", type: number, correct: 5 },
+		{ id: "bushalte", type: number, correct: 12 },
+		{ id: "zebrapad", type: number, correct: 5 },
+		{ id: "erf", type: yesno, correct: no },
+	],
+	"hoofdsteun":
+	[
+		{ id: "afstellen", type: choices, correct: 0, reorder: group_2_1 },
+	],
+	"lading.auto":
+	[
+		{ id: "hoogte", type: number, correct: 4 },
+		{ id: "lengte", type: number, correct: 12 },
+		{ id: "breedte.verhard", type: number, correct: 2.55 },
+		{ id: "breedte.onverhard", type: number, correct: 2.2 },
+	],
+	"lading.aanhanger":
+	[
+		{ id: "hoogte", type: number, correct: 4 },
+		{ id: "lengte", type: number, correct: 8 },
+		{ id: "breedte", type: number, correct: 2.55 },
+		{ id: "totaal", type: number, correct: 18 },
+	],
+	"lading.uitsteken":
+	[
+		{ id: "deelbaar.voor", type: number, correct: 0 },
+		{ id: "deelbaar.zij", type: number, correct: 0 },
+		{ id: "deelbaar.achter", type: number, correct: 1 },
+		{ id: "ondeelbaar.voor", type: number, correct: 1 },
+		{ id: "ondeelbaar.zij.auto", type: number, correct: 20 },
+		{ id: "ondeelbaar.zij.aanhanger", type: number, correct: 3 },
+		{ id: "ondeelbaar.achter", type: number, correct: 1 },
+		{ id: "bord", type: number, correct: 1 },
+	],
 };
 
 

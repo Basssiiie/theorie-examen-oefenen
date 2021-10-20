@@ -565,6 +565,11 @@
 				"question": "Je komt met de auto tussen de voertuigen van een militaire colonne terecht. Bij een stoplicht rijden de voertuigen verder door rood. Mag je ze volgen?",
 				"why": "Een militaire colonne mag doorrijden nadat hun stoplicht op rood springt. Je mag ze niet volgen als je zelf geen deel uit maakt van de militaire colonne."
 			}
+		},
+		"uitvaart":
+		{
+			"question": "Er rijdt een uitvaartstoet op de dwarsliggende weg voor je. Het stoplicht van de stoet gaat op rood en jouw stoplicht springt op groen. Mag je nu doorrijden en de uitvaartstoet doorkruizen?",
+			"why": "Een uitvaartstoet mag niet doorrijden nadat hun stoplicht op rood springt. Je mag ze daarna doorkruizen als jouw stoplicht daarna op groen springt."
 		}
 	},
 	"kantstrepen":
@@ -818,6 +823,11 @@
 		{
 			"question": "Is het toegestaan om groot licht te voeren bij slecht zicht overdag?",
 			"why": "Het is niet toegestaan om groot licht te voeren overdag. Er zijn geen uitzonderingen. Groot licht mag enkel 's nachts gebruikt worden als er geen andere bestuurders dicht voor je rijden of je tegemoet komen."
+		},
+		"kapot":
+		{
+			"question": "Is het toegestaan om overdag met een niet werkende koplamp de weg op te gaan?",
+			"why": "Het is niet toegestaan om te rijden met een kapot licht. Alle verplichte autolichten moeten werken als je de weg op gaat, zowel overdag als 's nachts."
 		}
 	},
 	"mistlicht":
@@ -868,6 +878,175 @@
 			{
 				"question": "Is het toegestaan om het mistachterlicht te gebruiken bij hevige sneeuwval?",
 				"why": "Het is toegestaan om het mistachterlicht te gebruiken bij hevige sneeuwval, als het zicht daarbij minder dan 50 meter is geworden. Het is niet toegestaan om het mistachterlicht te gebruiken bij hevige regenval, omdat de regen de felle rode lampen versterkt en daarmee de bestuurders achter de auto kan verblinden."
+			}
+		}
+	},
+	"apk":
+	{
+		"betekenis":
+		{
+			"question": "Wat is een A.P.K.?",
+			"choices": [ "Een periodieke verplichte keuring waar voor de verkeersveiligheid en mileaubescherming the auto gecontrolleerd wordt.", "Een aanpassing waarbij de motor van de auto flink opgevoerd kan worden.", "Een transportvoertuig die met gemak over verschillende soorten terrein kan rijden." ],
+			"why": "Een A.P.K. (algemene periodieke keuring) is een verplichte keuring waarbij de auto gecontrolleerd wordt. Hierbij wordt gekeken of de auto nog voldoet aan alle wettelijke eisen. Als de auto wordt goedgekeurd, krijg je een keuringsbewijs."
+		},
+		"bewijs":
+		{
+			"question": "Wat is een keuringsbewijs?",
+			"choices": [ "Een bewijs dat je nieuwe rijbewijs is goedgekeurd.", "Een bewijs dat een nieuw gemaakte auto is goedgekeurd door de fabrikant.", "Een bewijs dat de auto voldoet aan de wettelijke eisen." ],
+			"why": "Een keuringbewijs is een bewijs dat wordt uitgegeven als de auto geslaagd is voor de A.P.K. (algemene periodieke keuring). Hierbij wordt gekeken of de auto nog voldoet aan alle wettelijke eisen."
+		}
+	},
+	"parkeren":
+	{
+		"voorrangsweg":
+		{
+			"buiten":
+			{
+				"question": "Je rijdt de bebouwde kom uit en een voorrangsweg op. Mag je hier aan de zijkant van de weg parkeren?",
+				"why": "Het is niet toegestaan om op een voorrangsweg te parkeren buiten de bebouwde kom. Binnen de bebouwde kom mag er wel op een voorrangsweg geparkeerd worden, tenzij anders aangegeven."
+			},
+			"binnen":
+			{
+				"question": "Je rijdt de bebouwde kom in en een voorrangsweg op. Mag je hier aan de zijkant van de rijbaan parkeren?",
+				"why": "Het is toegestaan om op een voorrangsweg te parkeren binnen de bebouwde kom. Het is niet toegestaan om op een voorrangsweg te parkeren buiten de bebouwde kom."
+			},
+			"berm":
+			{
+				"question": "Mag je buiten de bebouwde kom in de berm naast een voorrangsweg parkeren?",
+				"why": "Het is toegestaan om in de berm naast een voorrangsweg te parkeren. Het is niet toegestaan om op een van de rijbanen van een voorrangsweg te parkeren buiten de bebouwde kom."
+			}
+		},
+		"kruispunt":
+		{
+			"question": "Wat is de minimale afstand die er moet zijn tussen de auto en een kruispunt als je gaat parkeren?",
+			"why": "Je mag niet op een kruispunt parkeren, of op een afstand van minder dan 5 meter tot het kruispunt. Deze 5 meter is nodig zodat de voertuigen die de ruimte nodig hebben veilig de bochten kunnen nemen, zoals bussen en vrachtwagens."
+		},
+		"bushalte":
+		{
+			"question": "Wat is de minimale afstand die er moet zijn tussen de auto en een bushalte als je gaat parkeren?",
+			"why": "Je mag niet voor een bushalte parkeren, of op een afstand van minder dan 12 meter tot de bushalte. Deze 12 meter is nodig zodat bussen genoeg ruimte hebben om ongehinderd bij de bushalte te stoppen en weer weg te rijden."
+		},
+		"zebrapad":
+		{
+			"question": "Wat is de minimale afstand die er moet zijn tussen de auto en een zebrapad als je gaat parkeren?",
+			"why": "Je mag niet op een zebrapad parkeren, of op een afstand van minder dan 5 meter tot het zebrapad. Deze 5 meter is nodig zodat bestuurders altijd voldoende zicht kunnen hebben op het zebrapad en overstekende voetgangers."
+		},
+		"erf":
+		{
+			"question": "Mag je op een woonerf aan de zijkant van de weg parkeren?",
+			"why": "Op een woonerf mag je alleen parkeren in de aanwezige parkeerplaatsen. Het is niet toegestaan op een woonerf buiten de parkeervakken te parkeren."
+		}
+	},
+	"hoofdsteun":
+	{
+		"afstellen":
+		{
+			"question": "Wat is de beste afstelhoogte voor een hoofdsteun in de auto?",
+			"choices": [ "De bovenkant van de hoofdsteun moet gelijk zijn met de bovenkant van het hoofd.", "De bovenkant van de hoofdsteun moet gelijk zijn met de hoogte van de oren.", "De onderkant van de hoofdsteun moet gelijk zijn met de hoogte van de kin." ],
+			"why": "De bovenkant van de hoofdsteun moet op gelijke hoogte zijn met de bovenkant van het hoofd. Een goed afgestelde hoofdsteun kan flinke nekschade voorkomen bij een aanrijding van achteren."
+		}
+	},
+	"lading":
+	{
+		"auto":
+		{
+			"hoogte":
+			{
+				"question": "Wat is de maximale toegestane hoogte in meters van een auto inclusief lading?",
+				"why": "De maximale toegestane hoogte van een auto met en zonder lading is 4 meter. Bij aanhangers is de maximum hoogte ook 4 meter."
+			},
+			"lengte":
+			{
+				"question": "Wat is de maximale toegestane lengte in meters van een auto zonder lading?",
+				"why": "De maximale toegestane lengte van een auto zonder lading is 12 meter."
+			},
+			"breedte":
+			{
+				"verhard":
+				{
+					"question": "Wat is de maximale toegestane breedte in meters van een auto inclusief lading op een geasfalteerde weg?",
+					"why": "De maximale toegestane breedte van een auto met en zonder lading is 2,55 meter op verharde wegen. Op onverharde wegen mag de auto met lading slechts 2,20 meter breed zijn."
+				},
+				"onverhard":
+				{
+					"question": "Wat is de maximale toegestane breedte in meters van een auto inclusief lading op een zandpad?",
+					"why": "De maximale toegestane breedte van een auto met en zonder lading is 2,20 meter op onverharde wegen. Op verharde wegen mag de auto met lading maximaal 2,55 meter breed zijn."
+				}
+			}
+		},
+		"aanhanger":
+		{
+			"hoogte":
+			{
+				"question": "Wat is de maximale toegestane hoogte in meters van een aanhager inclusief lading?",
+				"why": "De maximale toegestane hoogte van een aanhager met en zonder lading is 4 meter. Bij auto's is de maximum hoogte ook 4 meter."
+			},
+			"lengte":
+			{
+				"question": "Wat is de maximale toegestane lengte in meters van een aanhager zonder lading die lichter is dan 750 kg?",
+				"why": "De maximale toegestane lengte van een aanhanger onder de 750 kg zonder lading is 8 meter."
+			},
+			"breedte":
+			{
+				"question": "Wat is de maximale toegestane breedte in meters van een aanhager zonder lading?",
+				"why": "De maximale toegestane breedte van een aanhager zonder lading is 2,55 meter. Dit is hetzelfde als de maximum breedte voor auto's."
+			},
+			"totaal":
+			{
+				"question": "Wat is de totale toegestane maximumlengte in meters van een auto met aanhager zonder lading?",
+				"why": "De maximale toegestane lengte van een auto met aanhanger zonder lading is 18 meter."
+			}
+		},
+		"uitsteken":
+		{
+			"deelbaar":
+			{
+				"voor":
+				{
+					"question": "Hoever in meters mag een deelbare lading maximaal uitsteken aan de voorkant?",
+					"why": "Deelbare lading mag niet uitsteken aan de voorkant van de auto of de aanhanger. Het antwoord is dus 0 meter."
+				},
+				"zij":
+				{
+					"question": "Hoever in meters mag een deelbare lading maximaal uitsteken aan de zijkant?",
+					"why": "Deelbare lading mag niet breder zijn dan de auto of de aanhanger en mag dus niet uitsteken aan de zijkant. Het antwoord is dus 0 meter."
+				},
+				"achter":
+				{
+					"question": "Hoever in meters mag een deelbare lading maximaal uitsteken aan de achterkant?",
+					"why": "Deelbare lading mag maximaal 1 meter uitsteken aan de achterkant. Dit geldt voor zowel auto's als aanhangwagens."
+				}
+			},
+			"ondeelbaar":
+			{
+				"voor":
+				{
+					"question": "Hoever in meters mag een ondeelbare lading maximaal uitsteken aan de voorkant van de auto?",
+					"why": "Ondeelbare lading mag tot maximaal 1 meter uitsteken aan de voorkant van de auto."
+				},
+				"zij":
+				{
+					"auto":
+					{
+						"question": "Hoever in centimeters mag een ondeelbare lading maximaal uitsteken aan de zijkant van de auto?",
+						"why": "Ondeelbare lading mag niet verder uitsteken dan 20 centimeter naast de auto, tot een maximum van 2,55 meter."
+					},
+					"aanhanger":
+					{
+						"question": "Hoe breed mag een ondeelbare lading maximaal zijn op een aanhanger?",
+						"why": "Ondeelbare lading mag maximaal 3 meter breed zijn. Als de lading meer dan 10 centimeter uitsteekt, moet de lading gemarkeerd worden aan beide zijkanten."
+					}
+				},
+				"achter":
+				{
+					"question": "Hoever in meters mag een ondeelbare lading maximaal uitsteken aan de achterkant van de auto?",
+					"why": "Ondeelbare lading mag maximaal 1 meter uitsteken aan de achterkant van de auto. Dit geldt ook voor deelbare lading bij zowel auto's als aanhangwagens."
+				}
+			},
+			"bord":
+			{
+				"question": "Bij hoeveel meter uitsteek van de lading moeten er markingsborden toegevoegd worden?",
+				"why": "Als de lading meer dan 1 meter uitsteekt moeten er markeringsborden geplaatst om andere bestuurders te waarschuwen."
 			}
 		}
 	},
