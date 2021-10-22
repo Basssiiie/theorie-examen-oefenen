@@ -16,7 +16,7 @@ const config = {
 		}),
 		paths: {
 			// set base url path to repo name for Github Pages
-			base: "/gratis-theorie-examen"
+			base: "/theorie-examen-oefenen"
 		},
 		// hydrate the <div id="svelte"> element in src/app.html
 		target: "#svelte",

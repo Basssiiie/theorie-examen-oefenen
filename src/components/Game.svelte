@@ -76,7 +76,7 @@
 				{#if $active.image.type === "source"}
 					<img src={$active.image.filepath} alt={$_(`images.${$active.question.image}.alt`)} />
 				{:else if $active.image.type === "component"}
-					<svelte:component this={$active.image.component} {...((typeof $active.question.image === "object" && $active.question.image.params) ? $active.question.image.params : undefined)} />
+					<svelte:component this={$active.image.component} {...((typeof $active.question.image === "object" && $active.question.image.params) ? $active.question.image.params : {})} />
 				{/if}
 			</div>
 		{/if}
