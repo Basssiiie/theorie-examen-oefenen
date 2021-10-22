@@ -65,13 +65,14 @@
 	update();
 </script>
 
+<div class="top">
+	<h1 class="top-text">{$_("question")} {questionIndex + 1}{numberOfQuestions ? ` / ${numberOfQuestions}` : ''}</h1>
+</div>
 
-<section>
-	<h1>{$_("question")} {questionIndex + 1}{numberOfQuestions ? ` / ${numberOfQuestions}` : ''}</h1>
-
-	<form bind:this={form} on:submit|preventDefault={goNext} autocomplete="off">
+<form bind:this={form} on:submit|preventDefault={goNext} autocomplete="off" class="game">
+	<div class="flex-parent">
 		{#if $active.image}
-			<div class="picture box">
+			<div class="flex-child picture box">
 				{#if $active.image.type === "source"}
 					<img src={$active.image.filepath} alt={$_(`images.${$active.question.image}.alt`)} />
 				{:else if $active.image.type === "component"}
@@ -80,44 +81,142 @@
 			</div>
 		{/if}
 
-		<div class="question box">
-			<label for="answer" class="text">
-				{$active.localisation.question}
-			</label>
-		</div>
+		<div class="flex-child">
+			<div class="question box">
+				<label for="answer" class="text">
+					{$active.localisation.question}
+				</label>
+			</div>
 
-		<div class="choices box">
-			{#if $active.question.type === "choices" || $active.question.type === "yesno"}
-				<MultipleChoice question={$active} />
-			{:else if $active.question.type === "number"}
-				<NumberEntry question={$active} />
+			<div class="choices box">
+				{#if $active.question.type === "choices" || $active.question.type === "yesno"}
+					<MultipleChoice question={$active} />
+				{:else if $active.question.type === "number"}
+					<NumberEntry question={$active} />
+				{/if}
+			</div>
+
+			{#if $active.isCorrect !== null}
+				<div class="reason box">
+					<p class="text">{$active.localisation.why || ""}</p>
+				</div>
 			{/if}
 		</div>
+	</div>
 
-		{#if $active.isCorrect !== null}
-			<div class="reason box">
-				<p class="text">{$active.localisation.why || ""}</p>
-			</div>
-		{/if}
+	<div class="bottom">
+		<button on:click={goPrevious} disabled={questionIndex <= 0} type="button" class="bottom-button">{$_("previous")}</button>
+		<button type="submit" class="bottom-button button-next">{$_("next")}</button>
+	</div>
+</form>
 
-		<button on:click={goPrevious} disabled={questionIndex <= 0} type="button">{$_("previous")}</button>
-		<button type="submit">{$_("next")}</button>
-	</form>
-
-</section>
 
 
 <style>
+	.top, .bottom
+	{
+		color: white;
+		background-color: rgb(27, 55, 177);
+		box-shadow: 0px 1px 4px gray;
+		height: 60px;
+	}
+
+	.top
+	{
+		padding: 0px 25px;
+	}
+
+	.top-text
+	{
+		line-height: 60px;
+		margin: 0px;
+	}
+
+	.bottom
+	{
+		display: flex;
+		gap: 15px;
+		justify-content: space-between;
+		position: relative;
+		z-index: 1;
+	}
+
+	.bottom-button
+	{
+		border: 0;
+		background-color: rgb(74, 97, 199);
+		color: white;
+		cursor: pointer;
+		font-size: 1.3em;
+		line-height: 60px;
+		margin: 0px;
+		max-width: 200px;
+		padding: 0px;
+		text-align: center;
+		width: 100%;
+	}
+
+	.bottom-button:hover
+	{
+		background-color: rgb(106, 123, 199);
+	}
+
+	.bottom-button:active
+	{
+		background-color: rgb(122, 137, 202);
+	}
+
+	.bottom-button:disabled
+	{
+		background-color: rgb(59, 79, 164);
+		color: #ccc;
+		cursor: not-allowed;
+	}
+
+	.game
+	{
+		height: calc(100% - 120px);
+	}
+
+	.flex-parent
+	{
+		display:flex;
+ 		flex-wrap:wrap;
+		height: 100%;
+	}
+
+	.flex-child
+	{
+		flex: 300px;
+		margin: auto;
+		max-width: 800px;
+	}
+
 	.box
 	{
-		outline: blue solid 1px;
+		background-color: white;
+		box-shadow: 1px 1px 1px gray;
 		margin: 10px;
 		padding: 10px;
+	}
+
+	.picture
+	{
+		box-sizing: border-box;
+		display: flex;
+		justify-content: center;
+		padding: 25px;
+		height: 350px;
+	}
+
+	.picture :global(*)
+	{
+		width: 100%;
 	}
 
 	.text
 	{
 		display: block;
-		margin: 5px;
+		margin: 3px 5px;
 	}
 </style>

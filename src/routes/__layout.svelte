@@ -24,7 +24,9 @@
 </script>
 
 
-<slot/>
+<div class="page">
+	<slot/>
+</div>
 
 <label class="language">
 	{$_("language")}:
@@ -37,18 +39,31 @@
 
 
 <style>
-	:root
+	:root, :global(body)
 	{
   		background: #DDD;
 		color: #333;
 		font-family: Arial, Helvetica, sans-serif;
 		letter-spacing: .03em;
 		line-height: 1.5em;
+		margin: 0px;
+		padding: 0px;
+		height: 100%;
+		width: 100%;
+	}
+
+	.page
+	{
+		height: 100%;
 	}
 
 	.language
 	{
+		box-sizing: border-box;
+		color: white;
 		display: block;
-		margin: 16px 0px;
+		position: absolute;
+		top: 15px;
+		right: 15px;
 	}
 </style>
