@@ -14,6 +14,9 @@ const config = {
 			assets: "build",
 			fallback: null
 		}),
+		files: {
+			hooks: "./src/hooks.ts"
+		},
 		paths: {
 			// set base url path to repo name for Github Pages
 			base: "/theorie-examen-oefenen"
